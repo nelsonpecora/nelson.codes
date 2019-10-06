@@ -52,7 +52,6 @@
     font-size: 20px;
     justify-content: flex-start;
     padding: 10px 15px;
-    text-decoration: none;
     transition: 200ms background-color;
   }
   .social-link:hover {
