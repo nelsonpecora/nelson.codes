@@ -1,8 +1,17 @@
 <script>
-  export let style = 'light';
+  export let theme = 'light';
+  export let splash = false;
 </script>
 
 <style>
+  .splash {
+		align-items: center;
+		display: flex;
+		flex-flow: row wrap;
+		height: 100vh;
+		justify-content: center;
+		position: relative;
+	}
   .light {
     background-color: #FBF5F3;
     color: #0D1321;
@@ -24,8 +33,8 @@
   }
 </style>
 
-<div class={style}>
-  <section class="inner">
+<div class={theme}>
+  <section class="inner" class:splash>
     <slot />
   </section>
 </div>

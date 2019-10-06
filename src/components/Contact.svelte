@@ -1,5 +1,5 @@
 <script>
-  import Icon from '../../node_modules/fa-svelte'; //
+  import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
   import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
   import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
   import Wrapper from './Wrapper.svelte';
@@ -56,7 +56,10 @@
   }
   .social-link:hover {
     background-color: #31373E;
-    transition: 200ms background-color;
+  }
+  .social-link:active,
+  .social-link:focus {
+    background-color: #24292E;
   }
   .social-title {
     margin-left: 10px;
@@ -77,8 +80,8 @@
   }
 </style>
 
-<Wrapper style="grey">
-  <Heading title="Contact Me" />
+<Wrapper theme="grey">
+  <Heading title="Contact Me" anchor="contact" />
 
   <!-- twitter, github, email -->
   <ul class="socials">

@@ -15,11 +15,7 @@
 		justify-content: center;
 	}
 
-	h1 {
-		font-size: 50px;
-	}
-
-	p {
+	a {
 		font-size: 20px;
 		text-align: center;
 	}
@@ -29,15 +25,11 @@
 	<title>{status}</title>
 </svelte:head>
 
-<Wrapper style="dark">
+<Wrapper theme="dark">
 	<div class="centered">
-		<h1>{status}</h1>
+		<h1>{status} {error.message}</h1>
 
-		<p>
-			{error.message}
-			<br />
-			<a href="/">← Go home</a>
-		</p>
+		<a href="/">← Go home</a>
 
 		{#if dev && error.stack}
 			<pre>{error.stack}</pre>

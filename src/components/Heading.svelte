@@ -1,5 +1,6 @@
 <script>
   export let title = 'Section';
+  export let anchor = null;
 </script>
 
 <style>
@@ -9,4 +10,4 @@
   }
 </style>
 
-<h2 class="title">{title}</h2>
+<h2 id={anchor} class="title">{title}</h2>

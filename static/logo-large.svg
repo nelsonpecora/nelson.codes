@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1945px" height="1946px" viewBox="0 0 1945 1946" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg class="logo-large" viewBox="0 0 1945 1946" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
-    <title>cafe-logo-maker-a950</title>
+    <title>Large</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <polygon id="path-1" points="0.848 0.496 131.947048 0.496 131.947048 136.051 0.848 136.051"></polygon>
         <polygon id="path-3" points="0.988 0.969 160.555 0.969 160.555 169.141 0.988 169.141"></polygon>
     </defs>
-    <g id="cafe-logo-maker-a950" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Large" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#FBF5F3" cx="973" cy="973" r="966"></circle>
         <g id="tree" transform="translate(719.000000, 714.000000)" fill="#731817">
             <path d="M242.629,21.953 C242.629,31.246 232.918,41.086 223.484,41.086 C211.859,41.086 202.148,31.246 202.148,21.953 C202.148,10.473 211.859,0.633 223.484,0.633 C232.918,0.496 242.629,10.336 242.629,21.953 Z" id="Fill-26"></path>
             <path d="M317.57,21.953 C317.57,31.246 308.133,41.086 298.285,41.086 C286.801,41.086 277.363,31.246 277.363,21.953 C277.363,10.473 286.664,0.633 298.285,0.633 C308.133,0.496 317.57,10.336 317.57,21.953 Z" id="Fill-27"></path>

@@ -12,7 +12,6 @@
 </style>
 
 <main>
-	<slot name="fold" />
 	<slot></slot>
 	<Contact />
 
