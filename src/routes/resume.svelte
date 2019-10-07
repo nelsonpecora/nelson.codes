@@ -141,10 +141,9 @@
   .interest {
     align-items: center;
     display: flex;
-    flex: 0 0 auto;
+    flex: 1 0 300px;
     flex-flow: column nowrap;
     justify-content: center;
-    width: calc(50% - 20px);
   }
   .interest + .interest {
     margin-left: 20px;

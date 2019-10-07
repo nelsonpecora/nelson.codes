@@ -23,6 +23,13 @@
     padding: 20px 0;
     width: 100%;
   }
+  .inner {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    width: 100%;
+  }
 
   /* themes */
   .light {
@@ -41,7 +48,10 @@
   }
   .large {
     display: none;
-    width: 300px;
+    width: 250px;
+  }
+  .link {
+    font-size: 30px;
   }
 
   /* sticky header stays at the top of the screen */
@@ -52,18 +62,18 @@
     z-index: 1;
   }
   .sticky .inner {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
+    flex-flow: row nowrap;
     margin: 0 auto;
     max-width: 800px;
-    width: 100%;
   }
   .sticky .small {
     height: 50px;
   }
   .sticky .large {
     height: 100px;
+  }
+  .sticky .link {
+    font-size: 20px;
   }
 
   @media screen and (min-width: 768px) {
@@ -84,9 +94,9 @@
 
 <nav class:sticky class={theme}>
   <div class="inner">
-    <a href="/resume">RÉSUMÉ</a>
-    <div class="small">{@html smallLogo}</div>
-    <div class="large">{@html largeLogo}</div>
-    <a href="#contact" on:click={scroll}>CONTACT</a>
+    <a href="/resume" class="link">RÉSUMÉ</a>
+    <a href="/" class="small">{@html smallLogo}</a>
+    <a href="/" class="large">{@html largeLogo}</a>
+    <a href="#contact" class="link" on:click={scroll}>CONTACT</a>
   </div>
 </nav>

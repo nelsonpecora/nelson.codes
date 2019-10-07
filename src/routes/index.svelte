@@ -17,7 +17,8 @@
 
 <style>
 	.intro {
-		bottom: 40px;
+		bottom: 70px;
+		font-size: 24px;
 		position: absolute;
 		text-align: center;
 		width: 100%;
@@ -30,7 +31,7 @@
 
 <Wrapper splash={true} theme="dark">
 	<Header sticky={false} theme="dark" />
-	<p class="intro">Hi, I'm Nelson and I make <a href="#second" on:click={scroll}>web apps ↓</a></p>
+	<a class="intro" href="#second" on:click={scroll}>Hi, I'm Nelson and I make web apps ↓</a>
 </Wrapper>
 
 <Wrapper>
