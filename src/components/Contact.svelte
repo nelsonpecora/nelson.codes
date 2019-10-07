@@ -57,8 +57,7 @@
   .social-link:hover {
     background-color: #31373E;
   }
-  .social-link:active,
-  .social-link:focus {
+  .social-link:active {
     background-color: #24292E;
   }
   .social-title {

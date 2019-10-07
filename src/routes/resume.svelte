@@ -21,6 +21,7 @@
   import Heading from '../components/Heading.svelte';
   import Skill from '../components/Skill.svelte';
   import InteractiveResume from '../components/InteractiveResume.svelte';
+  import usfbd from '../../static/usfbd.svg';
 
   const { session } = stores();
   const parser = new UAParser($session['user-agent']);
@@ -118,8 +119,7 @@
   .icon:hover {
     background-color: #31373E;
   }
-  .icon:active,
-  .icon:focus {
+  .icon:active {
     background-color: #24292E;
   }
   .icon-text {
@@ -128,6 +128,36 @@
   .categories {
     margin: 0;
     padding: 0;
+  }
+
+  .interests {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .interest {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: calc(50% - 20px);
+  }
+  .interest + .interest {
+    margin-left: 20px;
+  }
+
+  .interest-img {
+    height: 150px;
+    margin: 0 0 10px;
+  }
+
+  .interest-title {
+    font-size: 20px;
+    margin: 10px 0 0;
   }
 </style>
 
@@ -176,4 +206,14 @@
 
 <Wrapper>
   <Heading title="Interests" />
+  <div class="interests">
+    <div class="interest">
+      <img class="interest-img" src="/pax.jpg" alt="Penny Arcade Expo" />
+      <a href="http://prime.paxsite.com/what-is-pax" target="_blank" class="interest-title">I volunteer two times a year at the Penny Arcade Expo. It's the largest fan-run video- and board-gaming convention in the United States.</a>
+    </div>
+    <div class="interest">
+      <div class="interest-img">{@html usfbd}</div>
+      <a href="https://www.usbattodo.com/" target="_blank" class="interest-title">I am the Media Director of the U.S. Federation of Battodo, an organization that brings together schools of Japanese swordsmanship.</a>
+    </div>
+  </div>
 </Wrapper>

@@ -1,11 +1,47 @@
 <script>
+  import hashSum from 'hash-sum';
   import jobs from './jobs.json';
   import Job from './Job.svelte';
 
   let prevColor;
   let companyColors = {};
+  let jobsToShow = 1;
+  let subjobsToShow = {
+    ...jobs.reduce((acc, job) => job.subjobs ? { ...acc, [hashSum(job)]: 0 } : acc, {})
+  }
 
-  function random (company) {
+  $: filteredJobs = jobs.slice(0, jobsToShow);
+  $: filteredSubjobs = {
+    ...jobs.reduce((acc, job) => job.subjobs ? { ...acc, [hashSum(job)]: job.subjobs.slice(0, subjobsToShow[hashSum(job)]) } : acc, {})
+  }
+  $: showMoreJobs = filteredJobs.length !== jobs.length;
+
+  function showSubjobs (job) {
+    const hash = hashSum(job);
+
+    return !!job.subjobs && subjobsToShow[hash] === 0;
+  }
+
+  function showMoreSubjobs (job) {
+    const hash = hashSum(job);
+
+    return !!job.subjobs
+      && filteredSubjobs[hash].length > 0
+      && filteredSubjobs[hash].length !== job.subjobs.length;
+  }
+
+  function addJob () {
+    jobsToShow += 1;
+  }
+
+  function addSubjob (job) {
+    const hash = hashSum(job);
+
+    subjobsToShow[hash] += 1;
+  }
+
+  function random (job) {
+    const hash = hashSum(job);
     const colors = [
       '#bbeaa6',
       '#e3c878',
@@ -18,27 +54,61 @@
       '#7189bf'
     ];
 
-    if (companyColors[company]) {
-      return companyColors[company];
+    if (companyColors[hash]) {
+      return companyColors[hash];
     }
 
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
     if (randomColor === prevColor) {
-      return random(company); // We just picked this color! pick another one
+      return random(hash); // We just picked this color! pick another one
     } else {
       prevColor = randomColor;
-      companyColors[company] = randomColor;
+      companyColors[hash] = randomColor;
       return randomColor;
     }
   }
 </script>
 
-{#each jobs as job (job.company)}
-  <Job color={random(job.company)} {job} />
+<style>
+  .more {
+    background-color: #FBF5F3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    outline: none;
+    padding: 6px 12px;
+    transition: 200ms background-color;
+  }
+  .more:hover {
+    background-color: #E5DFDD;
+  }
+  .more:active {
+    background-color: #CEC9C7;
+  }
+  .more + .more {
+    margin-top: 10px;
+  }
+</style>
+
+{#each filteredJobs as job (`${job.start}-${job.end}`)}
+  <Job color={random(job)} {job} />
   {#if job.subjobs}
-    {#each job.subjobs as subjob (subjob.company)}
-      <Job color={random(subjob.company)} job={subjob} />
+    {#each filteredSubjobs[hashSum(job)] as subjob (`${subjob.start}-${subjob.end}`)}
+      <Job color={random(subjob)} job={subjob} />
     {/each}
+    {#if showSubjobs(job, filteredSubjobs)}
+      <button class="more" on:click={() => addSubjob(job)}>I worked with →</button>
+    {/if}
+    {#if showMoreSubjobs(job, filteredSubjobs)}
+      <button class="more" on:click={() => addSubjob(job)}>I also worked with →</button>
+    {/if}
   {/if}
 {/each}
+{#if showMoreJobs}
+  <button class="more" on:click={addJob}>Before that ↓</button>
+{/if}

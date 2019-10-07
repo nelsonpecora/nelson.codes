@@ -52,7 +52,8 @@ code {
 }
 
 .logo-small,
-.logo-large {
+.logo-large,
+.logo-usfbd {
 	height: 100%;
 	width: 100%;
 }

@@ -19,10 +19,7 @@
 
 <style>
   nav {
-    align-items: center;
-    display: flex;
     font-family: 'Vast Shadow', cursive;
-    justify-content: space-around;
     padding: 20px 0;
     width: 100%;
   }
@@ -54,6 +51,14 @@
     top: 0;
     z-index: 1;
   }
+  .sticky .inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+  }
   .sticky .small {
     height: 50px;
   }
@@ -78,8 +83,10 @@
 </style>
 
 <nav class:sticky class={theme}>
-  <a href="/resume">RÉSUMÉ</a>
-  <div class="small">{@html smallLogo}</div>
-  <div class="large">{@html largeLogo}</div>
-  <a href="#contact" on:click={scroll}>CONTACT</a>
+  <div class="inner">
+    <a href="/resume">RÉSUMÉ</a>
+    <div class="small">{@html smallLogo}</div>
+    <div class="large">{@html largeLogo}</div>
+    <a href="#contact" on:click={scroll}>CONTACT</a>
+  </div>
 </nav>
