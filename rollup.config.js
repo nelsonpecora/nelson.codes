@@ -3,6 +3,7 @@ import replace from 'rollup-plugin-replace';
 import commonjs from 'rollup-plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import babel from 'rollup-plugin-babel';
+import json from 'rollup-plugin-json';
 import svg from 'rollup-plugin-svg';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
@@ -26,6 +27,7 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svg(),
+			json(),
 			svelte({
 				dev,
 				hydratable: true,
@@ -72,6 +74,7 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svg(),
+			json(),
 			svelte({
 				generate: 'ssr',
 				dev

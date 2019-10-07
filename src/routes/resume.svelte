@@ -1,19 +1,52 @@
 <script>
+  import UAParser from 'ua-parser-js';
+  import { stores } from '@sapper/app';
   import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
   import {
     faFilePdf,
     faLaptop,
+    faTv,
+    faTabletAlt,
+    faMobileAlt,
+    faDesktop,
+    faGamepad,
+    faPrint,
     faCode,
     faProjectDiagram,
     faChartBar
   } from '@fortawesome/free-solid-svg-icons';
+  import { faClock } from '@fortawesome/free-regular-svg-icons';
 	import Wrapper from '../components/Wrapper.svelte';
 	import Header from '../components/Header.svelte';
   import Heading from '../components/Heading.svelte';
   import Skill from '../components/Skill.svelte';
+  import InteractiveResume from '../components/InteractiveResume.svelte';
 
+  const { session } = stores();
+  const parser = new UAParser($session['user-agent']);
   const skills = [{
-    icon: () => faLaptop,
+    icon: () => {
+      const { type } = parser.getDevice();
+
+      // console, mobile, tablet, smarttv, wearable, embedded
+      if (type === 'console') {
+        return faGamepad;
+      } else if (type === 'mobile') {
+        return faMobileAlt;
+      } else if (type === 'tablet') {
+        return faTabletAlt;
+      } else if (type === 'smarttv') {
+        return faTv;
+      } else if (type === 'wearable') {
+        return faClock;
+      } else {
+        return [
+          { class: 'laptop', icon: faLaptop },
+          { class: 'desktop', icon: faDesktop },
+          { class: 'print', icon: faPrint }
+        ];
+      }
+    },
     title: 'Design & User Experience',
     items: [
       'Responsive Design',
@@ -134,4 +167,13 @@
       <Skill {category} />
     {/each}
   </ul>
+</Wrapper>
+
+<Wrapper>
+  <Heading title="Experience" />
+  <InteractiveResume />
+</Wrapper>
+
+<Wrapper>
+  <Heading title="Interests" />
 </Wrapper>

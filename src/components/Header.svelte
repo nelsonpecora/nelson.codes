@@ -1,10 +1,20 @@
 <script>
-  import { scrollto } from 'svelte-scrollto';
+  import { onMount } from 'svelte';
   import largeLogo from '../../static/logo-large.svg';
   import smallLogo from '../../static/logo-small.svg';
 
   export let sticky = true;
   export let theme = 'light';
+
+  let animateScroll;
+
+  onMount(async () => {
+    animateScroll = await import('svelte-scrollto');
+  })
+
+  function scroll () {
+    animateScroll.scrollTo({ element: '#contact' });
+  }
 </script>
 
 <style>
@@ -59,11 +69,17 @@
       display: block;
     }
   }
+
+  @media print {
+    .sticky {
+      display: none;
+    }
+  }
 </style>
 
 <nav class:sticky class={theme}>
   <a href="/resume">RÉSUMÉ</a>
   <div class="small">{@html smallLogo}</div>
   <div class="large">{@html largeLogo}</div>
-  <a href="#contact" use:scrollto={'#contact'}>CONTACT</a>
+  <a href="#contact" on:click={scroll}>CONTACT</a>
 </nav>

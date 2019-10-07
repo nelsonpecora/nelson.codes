@@ -3,6 +3,8 @@
 
   export let category = {};
 
+  $: icon = category.icon()
+
   let prevColor;
 
   function random () {
@@ -44,6 +46,33 @@
     line-height: 60px;
     margin-right: 10px;
   }
+  .desktop,
+  .print {
+    display: none;
+  }
+
+  .laptop {
+    display: block;
+  }
+
+  @media screen and (min-width: 2048px) {
+    .desktop {
+      display: block;
+    }
+    .laptop {
+      display: none;
+    }
+  }
+
+  @media print {
+    .desktop,
+    .laptop {
+      display: none;
+    }
+    .print {
+      display: block;
+    }
+  }
 
   .skills {
     align-items: flex-start;
@@ -66,7 +95,15 @@
 <li class="category">
   <div class="category-info">
     <div class="icon">
-      <Icon icon={category.icon()} />
+      {#if Array.isArray(icon)}
+        {#each icon as i}
+          <div class={i.class}>
+            <Icon icon={i.icon} />
+          </div>
+        {/each}
+      {:else}
+        <Icon icon={icon} />
+      {/if}
     </div>
     <h3>{category.title}</h3>
   </div>
