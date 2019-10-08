@@ -11,11 +11,11 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "deploy": "surge --project ./public/ --domain nelson.codes"
+    "deploy": "surge --project ./__sapper__/export/ --domain nelson.codes"
   },
   "git": {
     "scripts": {
-      "pre-push": "yarn build && yarn deploy"
+      "pre-push": "yarn export && yarn deploy"
     }
   },
   "dependencies": {
