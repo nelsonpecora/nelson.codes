@@ -72,6 +72,10 @@
 
 <svelte:head>
 	<title>Nelson Pecora</title>
+	<meta property="og:title" content="Nelson Pecora">
+	<meta property="twitter:title" content="Nelson Pecora">
+	<meta property="og:url" content="http://nelson.codes">
+	<meta property="twitter:url" content="http://nelson.codes">
 </svelte:head>
 
 <Wrapper splash={true} theme="dark">

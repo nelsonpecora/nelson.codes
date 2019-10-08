@@ -166,7 +166,11 @@
 </style>
 
 <svelte:head>
-	<title>Nelson Pecora</title>
+	<title>Résumé | Nelson Pecora</title>
+	<meta property="og:title" content="Résumé | Nelson Pecora">
+	<meta property="twitter:title" content="Résumé | Nelson Pecora">
+	<meta property="og:url" content="http://nelson.codes/resume">
+	<meta property="twitter:url" content="http://nelson.codes/resume">
 </svelte:head>
 
 <Header theme="dark" />
