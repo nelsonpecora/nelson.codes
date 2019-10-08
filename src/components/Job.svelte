@@ -1,11 +1,21 @@
 <script>
+  import { slide, scale } from 'svelte/transition';
   import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
   import { faAt } from '@fortawesome/free-solid-svg-icons';
 
   export let color;
   export let job;
+  export let isFirstJob = false;
 
   const { start, end, place, role, company, desc } = job;
+
+  let isCircleShown = isFirstJob || false;
+
+  function showCircle () {
+    // Don't display the circles until the item has finished its animation,
+    // since they get cut off while animating
+    isCircleShown = true;
+  }
 </script>
 
 <style>
@@ -45,8 +55,10 @@
   }
 </style>
 
-<div class="job" style={`border-color: ${color};`}>
-  <div class="circle" style={`background-color: ${color};`} />
+<div class="job" style={`border-color: ${color};`} transition:slide on:introend={showCircle}>
+  {#if isCircleShown}
+    <div class="circle" style={`background-color: ${color};`} transition:scale />
+  {/if}
   <p class="title">
     {role}
     <span class="icon" style={`color: ${color};`}>

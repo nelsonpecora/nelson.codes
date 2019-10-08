@@ -51,7 +51,13 @@
       '#99d8d0',
       '#4baea0',
       '#f299ee',
-      '#7189bf'
+      '#7189bf',
+      '#a7d1ea',
+      '#aba7ea',
+      '#c6a7ea',
+      '#eaa7e8',
+      '#eaa7b8',
+      '#afeaa7'
     ];
 
     if (companyColors[hash]) {
@@ -95,8 +101,8 @@
   }
 </style>
 
-{#each filteredJobs as job (`${job.start}-${job.end}`)}
-  <Job color={random(job)} {job} />
+{#each filteredJobs as job, index (`${job.start}-${job.end}`)}
+  <Job color={random(job)} {job} isFirstJob={index === 0} />
   {#if job.subjobs}
     {#each filteredSubjobs[hashSum(job)] as subjob (`${subjob.start}-${subjob.end}`)}
       <Job color={random(subjob)} job={subjob} />

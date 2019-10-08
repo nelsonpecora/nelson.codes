@@ -98,12 +98,17 @@
 
 <style>
   .bslg {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  .bslg-hed {
+    width: 100%;
+    text-align: center;
   }
   /* pdf download */
   .icon {
     align-items: center;
-    background-color: #424B54;
+    background-color: #731816;
     border-radius: 50%;
     color: #FBF5F3;
     display: flex;
@@ -111,16 +116,16 @@
     font-size: 100px; /* force the icon larger, then set the text smaller */
     height: 300px;
     justify-content: center;
-    margin: 40px auto;
+    margin: 60px auto 40px;
     padding: 30px;
     transition: 200ms background-color;
     width: 300px;
   }
   .icon:hover {
-    background-color: #31373E;
+    background-color: #691614;
   }
   .icon:active {
-    background-color: #24292E;
+    background-color: #5F1413;
   }
   .icon-text {
     font-size: 20px;
@@ -169,16 +174,16 @@
   <Heading title="“Brilliancy, Speed, Lightness, Glory”" />
 	<p class="bslg">A mantra taken from Bruce Sterling’s <em>The Caryatids</em>, a dystopic novel about recovering from the climate crisis. To me, this represents everything I strive for as a developer.</p>
 
-  <h3>Brilliancy</h3>
+  <h3 class="bslg-hed">Brilliancy</h3>
   <p class="bslg">Wit, lateral thinking, and epiphanies. The ability to solve an intractable problem with an ingenious solution</p>
 
-  <h3>Speed</h3>
+  <h3 class="bslg-hed">Speed</h3>
   <p class="bslg">Not just working quickly, but being able to break work down into iterable tasks. Slow is smooth, smooth is fast</p>
 
-  <h3>Lightness</h3>
+  <h3 class="bslg-hed">Lightness</h3>
   <p class="bslg">Iteration, modular architecture, and legible code. If you can work on a project and hand it to another developer without them wanting to stab you, you’re doing it right</p>
 
-  <h3>Glory</h3>
+  <h3 class="bslg-hed">Glory</h3>
   <p class="bslg">The transcendent quality that separates the good from the amazing, the little touches that change the way we think about UIs, and the reason we describe some products as “magical and revolutionary”</p>
 </Wrapper>
 

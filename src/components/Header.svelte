@@ -26,7 +26,6 @@
   .inner {
     align-items: center;
     display: flex;
-    flex-flow: column nowrap;
     justify-content: space-around;
     width: 100%;
   }
@@ -52,6 +51,19 @@
   }
   .link {
     font-size: 30px;
+  }
+  /* splash header displays on the homepage */
+  .splash .inner {
+    flex-flow: column nowrap;
+  }
+  .splash .link {
+    margin: 20px;
+  }
+  .splash .small {
+    display: none !important;
+  }
+  .splash .large {
+    display: block !important;
   }
 
   /* sticky header stays at the top of the screen */
@@ -83,6 +95,9 @@
     .large {
       display: block;
     }
+    .splash .inner {
+      flex-flow: row nowrap;
+    }
   }
 
   @media print {
@@ -92,11 +107,11 @@
   }
 </style>
 
-<nav class:sticky class={theme}>
+<nav class:sticky class:splash={!sticky} class={theme}>
   <div class="inner">
     <a href="/resume" class="link">RÉSUMÉ</a>
     <a href="/" class="small">{@html smallLogo}</a>
     <a href="/" class="large">{@html largeLogo}</a>
-    <a href="#contact" class="link" on:click={scroll}>CONTACT</a>
+    <a href="#contact" class="link" on:click|preventDefault={scroll}>CONTACT</a>
   </div>
 </nav>
