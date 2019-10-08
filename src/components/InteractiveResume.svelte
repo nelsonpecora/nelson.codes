@@ -5,7 +5,7 @@
 
   let prevColor;
   let companyColors = {};
-  let jobsToShow = 1;
+  let jobsToShow = 2;
   let subjobsToShow = {
     ...jobs.reduce((acc, job) => job.subjobs ? { ...acc, [hashSum(job)]: 0 } : acc, {})
   }
@@ -102,7 +102,7 @@
 </style>
 
 {#each filteredJobs as job, index (`${job.start}-${job.end}`)}
-  <Job color={random(job)} {job} isFirstJob={index === 0} />
+  <Job color={random(job)} {job} isFirstJob={index <= 2} />
   {#if job.subjobs}
     {#each filteredSubjobs[hashSum(job)] as subjob (`${subjob.start}-${subjob.end}`)}
       <Job color={random(subjob)} job={subjob} />

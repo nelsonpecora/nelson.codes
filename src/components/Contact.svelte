@@ -72,6 +72,7 @@
       align-items: flex-start;
       flex-flow: row wrap;
       justify-content: space-between;
+      margin: 40px 0;
     }
     .social {
       margin: 0;
