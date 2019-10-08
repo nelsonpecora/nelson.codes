@@ -64,6 +64,7 @@
   }
   .splash .large {
     display: block !important;
+    order: -1;
   }
 
   /* sticky header stays at the top of the screen */
@@ -97,6 +98,9 @@
     }
     .splash .inner {
       flex-flow: row nowrap;
+    }
+    .splash .large {
+      order: 0;
     }
   }
 
