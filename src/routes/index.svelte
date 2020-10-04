@@ -7,7 +7,7 @@
 	import projects from '../components/projects.json';
 
 	let animateScroll;
-	let projectsToShow = 4;
+	let projectsToShow = 2;
 
 	$: filteredProjects = projects.slice(0, projectsToShow);
 	$: showMore = filteredProjects.length < projects.length;
