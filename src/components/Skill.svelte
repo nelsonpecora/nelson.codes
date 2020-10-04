@@ -1,9 +1,7 @@
 <script>
-  import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
-
   export let category = {};
 
-  $: icon = category.icon()
+  $: icon = category.icon ? category.icon() : null
 
   let prevColor;
 
@@ -42,10 +40,11 @@
     justify-content: flex-start;
   }
   .icon {
-    font-size: 60px; /* make icon big */
-    line-height: 60px;
+    height: 60px;
     margin-right: 10px;
+    width: 60px;
   }
+
   .desktop,
   .print {
     display: none;
@@ -98,11 +97,11 @@
       {#if Array.isArray(icon)}
         {#each icon as i}
           <div class={i.class}>
-            <Icon icon={i.icon} />
+            <svelte:component this={i.icon} />
           </div>
         {/each}
       {:else}
-        <Icon icon={icon} />
+        <svelte:component this={icon} />
       {/if}
     </div>
     <h3>{category.title}</h3>

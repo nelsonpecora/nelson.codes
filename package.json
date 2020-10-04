@@ -27,6 +27,7 @@
     "hash-sum": "^2.0.0",
     "polka": "next",
     "sirv": "^0.4.0",
+    "svelte-icons": "^2.1.0",
     "svelte-scrollto": "^0.1.1",
     "ua-parser-js": "^0.7.20"
   },

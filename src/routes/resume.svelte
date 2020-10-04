@@ -1,21 +1,18 @@
 <script>
   import UAParser from 'ua-parser-js';
   import { stores } from '@sapper/app';
-  import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
-  import {
-    faFilePdf,
-    faLaptop,
-    faTv,
-    faTabletAlt,
-    faMobileAlt,
-    faDesktop,
-    faGamepad,
-    faPrint,
-    faCode,
-    faProjectDiagram,
-    faChartBar
-  } from '@fortawesome/free-solid-svg-icons';
-  import { faClock } from '@fortawesome/free-regular-svg-icons';
+  import FaGamepad from 'svelte-icons/fa/FaGamepad.svelte';
+  import FaMobileAlt from 'svelte-icons/fa/FaMobileAlt.svelte';
+  import FaTabletAlt from 'svelte-icons/fa/FaTabletAlt.svelte';
+  import FaTv from 'svelte-icons/fa/FaTv.svelte';
+  import FaRegClock from 'svelte-icons/fa/FaRegClock.svelte';
+  import FaLaptop from 'svelte-icons/fa/FaLaptop.svelte';
+  import FaDesktop from 'svelte-icons/fa/FaDesktop.svelte';
+  import FaPrint from 'svelte-icons/fa/FaPrint.svelte';
+  import DiCode from 'svelte-icons/di/DiCode.svelte'
+  import DiTerminal from 'svelte-icons/di/DiTerminal.svelte';
+  import DiTrello from 'svelte-icons/di/DiTrello.svelte';
+  import FaFilePdf from 'svelte-icons/fa/FaFilePdf.svelte';
 	import Wrapper from '../components/Wrapper.svelte';
 	import Header from '../components/Header.svelte';
   import Heading from '../components/Heading.svelte';
@@ -31,20 +28,20 @@
 
       // console, mobile, tablet, smarttv, wearable, embedded
       if (type === 'console') {
-        return faGamepad;
+        return FaGamepad;
       } else if (type === 'mobile') {
-        return faMobileAlt;
+        return FaMobileAlt;
       } else if (type === 'tablet') {
-        return faTabletAlt;
+        return FaTabletAlt;
       } else if (type === 'smarttv') {
-        return faTv;
+        return FaTv;
       } else if (type === 'wearable') {
-        return faClock;
+        return FaRegClock;
       } else {
         return [
-          { class: 'laptop', icon: faLaptop },
-          { class: 'desktop', icon: faDesktop },
-          { class: 'print', icon: faPrint }
+          { class: 'laptop', icon: FaLaptop },
+          { class: 'desktop', icon: FaDesktop },
+          { class: 'print', icon: FaPrint }
         ];
       }
     },
@@ -59,7 +56,7 @@
       'A11y Accessibility'
     ]
   }, {
-    icon: () => faCode,
+    icon: () => DiCode,
     title: 'Development',
     items: [
       'Vue',
@@ -74,7 +71,7 @@
       'Technical Documentation'
     ]
   }, {
-    icon: () => faProjectDiagram,
+    icon: () => DiTerminal,
     title: 'Software Architecture',
     items: [
       'SPA Architecture',
@@ -84,7 +81,7 @@
       'Data Modeling'
     ]
   }, {
-    icon: () => faChartBar,
+    icon: () => DiTrello,
     title: 'Product Management',
     items: [
       'Agile Development',
@@ -106,7 +103,7 @@
     text-align: center;
   }
   /* pdf download */
-  .icon {
+  .pdf-button {
     align-items: center;
     background-color: #731816;
     border-radius: 50%;
@@ -121,13 +118,17 @@
     transition: 200ms background-color;
     width: 300px;
   }
-  .icon:hover {
+  .pdf-button:hover {
     background-color: #691614;
   }
-  .icon:active {
+  .pdf-button:active {
     background-color: #5F1413;
   }
-  .icon-text {
+  .pdf-icon {
+    width: 100px;
+    height: 100px;
+  }
+  .pdf-button-text {
     font-size: 20px;
   }
   .categories {
@@ -192,9 +193,11 @@
 </Wrapper>
 
 <Wrapper>
-	<a class="icon" href="/resume.pdf" target="_blank">
-    <Icon icon={faFilePdf} />
-		<p class="icon-text">Download PDF Résumé</p>
+	<a class="pdf-button" href="/resume.pdf" target="_blank">
+    <div class="pdf-icon">
+      <FaFilePdf />
+    </div>
+		<p class="pdf-button-text">Download PDF Résumé</p>
 	</a>
 </Wrapper>
 
