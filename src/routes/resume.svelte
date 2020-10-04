@@ -49,11 +49,11 @@
     items: [
       'Responsive Design',
       'Optimistic UI',
-      'ReST API Design',
-      'GraphQL API Design',
       'Information Architecture',
       'Data Visualization',
-      'A11y Accessibility'
+      'A11y Accessibility',
+      'Tutorial Design',
+      'CLI Tooling UX'
     ]
   }, {
     icon: () => DiCode,
@@ -66,19 +66,24 @@
       'CSS-In-JS',
       'Node.js',
       'Apollo',
-      'Prisma',
       'Dgraph',
-      'Technical Documentation'
+      'Redis',
+      'Prosemirror',
+      'TDD & BDD'
     ]
   }, {
     icon: () => DiTerminal,
     title: 'Software Architecture',
     items: [
+      'ReST API Design',
+      'GraphQL API Design',
       'SPA Architecture',
+      'Static Site Generators',
       'CI/CD Workflows',
       'Open Source Library Design',
-      'Large-Scale Modularity',
-      'Data Modeling'
+      'Modular CMS Design',
+      'Data Modeling',
+      'Data Migration & Tooling'
     ]
   }, {
     icon: () => DiTrello,
@@ -88,7 +93,8 @@
       'Design Sprints',
       'Product Roadmapping',
       'GTM Strategy',
-      'Holacracy'
+      'Technical Documentation',
+      'UAT Best Practices'
     ]
   }]
 </script>
