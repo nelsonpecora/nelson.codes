@@ -63,9 +63,16 @@
   .social-title {
     margin-left: 10px;
   }
+  .webring {
+    color: #31373E;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
   .copyright {
     font-size: 14px;
     margin: 20px 0;
+    text-align: center;
   }
   @media screen and (min-width: 630px) {
     .socials {
@@ -94,6 +101,13 @@
       </li>
     {/each}
   </ul>
+
+  <webring-banner class="webring">
+    <p>Member of the <a href="https://mainframe.club">Mainframe.club</a> webring</p>
+    <a href="https://mainframe.club/prev">Previous</a>
+    <a href="https://mainframe.club/random">Random</a>
+    <a href="https://mainframe.club/next">Next</a>
+  </webring-banner>
 
   <!-- copyright notice -->
   <p class="copyright">
