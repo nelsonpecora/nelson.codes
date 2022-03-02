@@ -80,7 +80,7 @@
 
 <Wrapper splash={true} theme="dark">
 	<Header sticky={false} theme="dark" />
-	<a class="intro" href="#second" on:click={scroll}>Hi, I'm Nelson and I make web apps ↓</a>
+	<a class="intro" href="#second" on:click={scroll}>Hi, I'm Nelson and I architect Content Management Systems ↓</a>
 </Wrapper>
 
 <Wrapper>

@@ -111,6 +111,6 @@
 
   <!-- copyright notice -->
   <p class="copyright">
-    © {year} Nelson Pecora, under a Creative Commons (<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">attribution, noncommercial, share-alike</a>) license
+    © {year} Nelson Pecora, under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
   </p>
 </Wrapper>

@@ -5,22 +5,39 @@
     "place": "New York, NY",
     "role": "Principle Software Engineer",
     "company": "Newsela",
-    "desc": "Lead architect of Alexandria, Newsela’s content management system. I designed a graph-based content model for educational materials and led a multidisciplinary team building React and GraphQL-based content editors."
+    "desc": "Lead architect of Alexandria, Newsela's content management system. I built and mentored a team of engineers, designers, and product managers and led cross-departmental initiatives with direct business impact.",
+    "showMore": "My current role",
+    "showEvenMore": "My previous role",
+    "subjobs": [{
+      "start": "August 2021",
+      "end": "Present",
+      "place": "New York, NY",
+      "role": "Principal Software Engineer",
+      "desc": "Continued to architect and guide the roadmap of Alexandria. I advocated for and led long-term company initiatives and made critical infrastructure decisions."
+    }, {
+      "start": "December 2018",
+      "end": "August 2021",
+      "place": "New York, NY",
+      "role": "Lead Web Applications Developer",
+      "desc": "I designed a graph-based content model for educational materials and coordinated long-term roadmaps with multiple editorial and product stakeholders."
+    }]
   }, {
     "start": "June 2014",
     "end": "December 2018",
     "place": "New York, NY",
     "role": "Senior Web Developer",
     "company": "New York Magazine",
-    "desc": "Lead architect of Clay, New York Magazine's content management system. I built open-source and internal libraries for Vue and Node.js (including 30+ libraries published to npm), and I assisted in launching five brand verticals and numerous popup blogs."
+    "desc": "Lead architect of Clay, New York Magazine's content management system. I built and managed open-source libraries with multiple internal and external corporate stakeholders, and I assisted in launching five brand verticals and numerous popup blogs."
   },
   {
     "start": "May 2010",
     "end": "June 2014",
     "place": "Brooklyn, NY",
     "role": "Freelance Web Designer",
-    "company": "Self Employed",
-    "desc": "I've built websites and web apps for freelance clients in San Francisco, New York, and Tokyo. I'm most comfortable with front-end design and development, but I've done some full-stack work with Sinatra, Nodejs and CMS's like Drupal, Wordpress, and Shopify.",
+    "company": "Keats Heavy Industries",
+    "desc": "I built websites and web apps for freelance clients in San Francisco, New York, and Tokyo.",
+    "showMore": "I worked with",
+    "showEvenMore": "I also worked with",
     "subjobs": [
       {
         "start": "July 2013",
@@ -70,7 +87,9 @@
     "place": "CA and NY",
     "role": "IT Consultant",
     "company": "Self Employed",
-    "desc": "Before shifting focus to web design and development, I worked as a freelance IT consultant for small and medium businesses in Rochester, NY and the Bay Area. I focused on networking, troubleshooting, and linux rollouts, and I'm both Sonicwall and A+ certified.",
+    "desc": "Before shifting focus to web design and development, I worked as a freelance IT consultant for small and medium businesses in Rochester, NY and the Bay Area. I focused on networking, troubleshooting, and linux rollouts, and was both Sonicwall and COMPTIA A+ certified.",
+    "showMore": "I worked with",
+    "showEvenMore": "I also worked with",
     "subjobs": [
       {
         "start": "Jan. 2010",
@@ -78,7 +97,7 @@
         "place": "Rochester, NY",
         "role": "Level III Systems Engineer",
         "company": "Kriterium, LLC",
-        "desc": "At Kriterum, I provided IT managed solutions to medium and large business clients. This included traveling to server rollouts along the Eastern Seaboard, compiling technical documentation, and a lot of network cable crimping."
+        "desc": "At Kriterum, I provided IT managed solutions to medium and large businesses. This included traveling to server rollouts along the Eastern Seaboard, compiling technical documentation, and a lot of network cable crimping."
       },
       {
         "start": "Dec. 2009",
@@ -86,7 +105,7 @@
         "place": "Rochester, NY",
         "role": "Systems Administrator",
         "company": "RIT Center for Computational Relativity and Gravitation",
-        "desc": "The RIT CCRG is a small research group that uses supercomputers to model the collisions of galaxies and black holes. I didn't work on that directly, but I maintained their webservers, fileservers, backup systems, and website."
+        "desc": "The RIT CCRG is a small research group that uses supercomputers to model the collisions of galaxies and black holes. I maintained their webservers, fileservers, backup systems, and website."
       },
       {
         "start": "March 2009",
@@ -102,7 +121,7 @@
         "place": "Rochester, NY",
         "role": "Tier 1 Technical Support",
         "company": "Eastman Kodak Company",
-        "desc": "I did a brief stint in call-center technical support, and lobbied for Linux driver support for Kodak's printers. We all know how that turned out."
+        "desc": "I did a brief stint in call-center technical support, and lobbied for Linux driver support for Kodak's printers."
       }
     ]
   },
@@ -120,7 +139,7 @@
     "place": "San Ramon, CA",
     "role": "Shift Supervisor / IT Manager",
     "company": "Country Club Cleaners",
-    "desc": "I started at this dry cleaners working the front desk, and eventually became the senior customer service employee in charge of two locations and 14 delivery routes. By the end I was assisting the CEO and President with business-level IT decisions and spent most of my time training employees and providing tech support."
+    "desc": "I started at this dry cleaners working the front desk, and eventually became the senior customer service employee in charge of two locations and 14 delivery routes. By my senior year in high school I was assisting the CEO and President with business-level IT decisions, and spending most of my time training employees and providing tech support."
   },
   {
     "start": "June 2004",

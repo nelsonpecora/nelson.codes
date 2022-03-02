@@ -108,10 +108,10 @@
       <Job color={random(subjob)} job={subjob} />
     {/each}
     {#if showSubjobs(job, filteredSubjobs)}
-      <button class="more" on:click={() => addSubjob(job)}>I worked with →</button>
+      <button class="more" on:click={() => addSubjob(job)}>{job.showMore} →</button>
     {/if}
     {#if showMoreSubjobs(job, filteredSubjobs)}
-      <button class="more" on:click={() => addSubjob(job)}>I also worked with →</button>
+      <button class="more" on:click={() => addSubjob(job)}>{job.showEvenMore} →</button>
     {/if}
   {/if}
 {/each}

@@ -51,7 +51,7 @@
       'Optimistic UI',
       'Information Architecture',
       'Data Visualization',
-      'A11y Accessibility',
+      'A11y & WCAG Accessibility',
       'Tutorial Design',
       'CLI Tooling UX'
     ]
@@ -65,11 +65,14 @@
       'Sass',
       'CSS-In-JS',
       'Node.js',
+      'Node CLI Tooling',
       'Apollo',
       'Dgraph',
+      'Neo4J',
+      'Graph Databases',
       'Redis',
       'Prosemirror',
-      'TDD & BDD'
+      'Test-Driven Development'
     ]
   }, {
     icon: () => DiTerminal,
@@ -80,9 +83,9 @@
       'SPA Architecture',
       'Static Site Generators',
       'CI/CD Workflows',
-      'Open Source Library Design',
+      'Open Source Library Management',
       'Modular CMS Design',
-      'Data Modeling',
+      'Graph Data Modeling',
       'Data Migration & Tooling'
     ]
   }, {
@@ -90,6 +93,8 @@
     title: 'Product Management',
     items: [
       'Agile Development',
+      'SCRUM',
+      'Kanban',
       'Design Sprints',
       'Product Roadmapping',
       'GTM Strategy',
@@ -156,6 +161,7 @@
     flex: 1 0 300px;
     flex-flow: column nowrap;
     justify-content: center;
+    margin: 0 20px 30px;
   }
   .interest + .interest {
     margin-left: 20px;
@@ -224,13 +230,21 @@
 <Wrapper>
   <Heading title="Interests" />
   <div class="interests">
-    <div class="interest">
-      <img class="interest-img" src="/pax.jpg" alt="Penny Arcade Expo" />
-      <a href="http://prime.paxsite.com/what-is-pax" target="_blank" class="interest-title">I volunteer two times a year at the Penny Arcade Expo. It's the largest fan-run video- and board-gaming convention in the United States.</a>
-    </div>
-    <div class="interest">
+    <a href="https://www.brooklynbattodo.com/" target="_blank" class="interest">
+      <img class="interest-img" src="/zentokan.png" alt="Zentokan Dojo" />
+      <span class="interest-title">I'm the Treasurer of Zentokan Dojo, as well as an assistant instructor. I hold the rank of nidan in <em>Zen Nihon Toyama Ryu Iaido Renmei</em> (全日本戸山流居合道連盟), a Japanese organization that teaches Toyama-Ryu Battodo.</span>
+    </a>
+    <a href="https://www.usbattodo.com/" target="_blank" class="interest">
       <div class="interest-img">{@html usfbd}</div>
-      <a href="https://www.usbattodo.com/" target="_blank" class="interest-title">I am the Media Director of the U.S. Federation of Battodo, an organization that brings together schools of Japanese swordsmanship.</a>
-    </div>
+      <span class="interest-title">I am the Media Director and hold the rank of nidan in the U.S. Federation of Battodo (全米抜刀道連盟), an organization that brings together various schools of Japanese swordsmanship.</span>
+    </a>
+    <a href="http://prime.paxsite.com/what-is-pax" target="_blank" class="interest">
+      <img class="interest-img" src="/pax.jpg" alt="Penny Arcade Expo" />
+      <span class="interest-title">I'm a Deputy Manager for Virtual Reality at the Penny Arcade Expo. It's the largest fan-run video and board gaming convention in the United States.</span>
+    </a>
+    <a href="https://newplayexchange.org/plays/157480/parlor-tricks" target="_blank" class="interest">
+      <img class="interest-img" src="/parlortricks.webp" alt="Parlor Tricks" />
+      <span class="interest-title">I dramaturged and helped produce <em>Parlor Tricks</em>, an award-winning play about mediums and con-women in 1910s New York.</span>
+    </a>
   </div>
 </Wrapper>

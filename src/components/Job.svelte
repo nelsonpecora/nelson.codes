@@ -61,10 +61,12 @@
   {/if}
   <p class="title">
     {role}
-    <span class="icon" style={`color: ${color};`}>
-      <Icon icon={faAt} />
-    </span>
-    {company}
+    {#if company}
+      <span class="icon" style={`color: ${color};`}>
+        <Icon icon={faAt} />
+      </span>
+      {company}
+    {/if}
   </p>
   <p class="subtitle">{place} · <em>{start} – {end}</em></p>
   <p class="desc">{desc}</p>
