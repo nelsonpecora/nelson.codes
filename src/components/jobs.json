@@ -1,16 +1,24 @@
 [
   {
-    "start": "December 2018",
+    "start": "August 2022",
     "end": "Present",
+    "place": "New York, NY",
+    "role": "Principle Software Engineer",
+    "company": "Atlassian",
+    "desc": "I led initiatives to increase performance and scalability of Confluence Cloud."
+  },
+  {
+    "start": "December 2018",
+    "end": "August 2022",
     "place": "New York, NY",
     "role": "Principle Software Engineer",
     "company": "Newsela",
     "desc": "Lead architect of Alexandria, Newsela's content management system. I built and mentored a team of engineers, designers, and product managers and led cross-departmental initiatives with direct business impact.",
-    "showMore": "My current role",
+    "showMore": "My last role",
     "showEvenMore": "My previous role",
     "subjobs": [{
       "start": "August 2021",
-      "end": "Present",
+      "end": "August 2022",
       "place": "New York, NY",
       "role": "Principal Software Engineer",
       "desc": "Continued to architect and guide the roadmap of Alexandria. I advocated for and led long-term company initiatives and made critical infrastructure decisions."

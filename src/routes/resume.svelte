@@ -50,6 +50,7 @@
       'Responsive Design',
       'Optimistic UI',
       'Information Architecture',
+      'Design Sprints',
       'Data Visualization',
       'A11y & WCAG Accessibility',
       'Tutorial Design',
@@ -81,12 +82,14 @@
       'ReST API Design',
       'GraphQL API Design',
       'SPA Architecture',
+      'SSR Architecture',
       'Static Site Generators',
       'CI/CD Workflows',
       'Open Source Library Management',
       'Modular CMS Design',
       'Graph Data Modeling',
-      'Data Migration & Tooling'
+      'Data Migration & Tooling',
+      'Technical Documentation'
     ]
   }, {
     icon: () => DiTrello,
@@ -95,10 +98,9 @@
       'Agile Development',
       'SCRUM',
       'Kanban',
-      'Design Sprints',
+      'OKR Strategy',
       'Product Roadmapping',
       'GTM Strategy',
-      'Technical Documentation',
       'UAT Best Practices'
     ]
   }]
