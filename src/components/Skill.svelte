@@ -1,32 +1,8 @@
 <script>
+  import random from '../utils/colors';
   export let category = {};
 
   $: icon = category.icon ? category.icon() : null
-
-  let prevColor;
-
-  function random () {
-    const colors = [
-      '#bbeaa6',
-      '#e3c878',
-      '#ed9a73',
-      '#e688a1',
-      '#c886e5',
-      '#99d8d0',
-      '#4baea0',
-      '#f299ee',
-      '#7189bf'
-    ];
-
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-    if (randomColor === prevColor) {
-      return random(); // We just picked this color! pick another one
-    } else {
-      prevColor = randomColor;
-      return randomColor;
-    }
-  }
 </script>
 
 <style>
@@ -108,8 +84,8 @@
   </div>
 
   <ul class="skills">
-    {#each category.items as skill}
-      <li class="skill" style={`border-color: ${random()};`}>{skill}</li>
+    {#each category.items as skill, i}
+      <li class="skill" style={`border-color: ${random(skill, category.items[i - 1])};`}>{skill}</li>
     {/each}
   </ul>
 </li>

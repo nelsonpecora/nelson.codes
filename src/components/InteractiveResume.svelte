@@ -2,9 +2,8 @@
   import hashSum from 'hash-sum';
   import jobs from './jobs.json';
   import Job from './Job.svelte';
+  import random from '../utils/colors';
 
-  let prevColor;
-  let companyColors = {};
   let jobsToShow = 2;
   let subjobsToShow = {
     ...jobs.reduce((acc, job) => job.subjobs ? { ...acc, [hashSum(job)]: 0 } : acc, {})
@@ -40,39 +39,12 @@
     subjobsToShow[hash] += 1;
   }
 
-  function random (job) {
-    const hash = hashSum(job);
-    const colors = [
-      '#bbeaa6',
-      '#e3c878',
-      '#ed9a73',
-      '#e688a1',
-      '#c886e5',
-      '#99d8d0',
-      '#4baea0',
-      '#f299ee',
-      '#7189bf',
-      '#a7d1ea',
-      '#aba7ea',
-      '#c6a7ea',
-      '#eaa7e8',
-      '#eaa7b8',
-      '#afeaa7'
-    ];
-
-    if (companyColors[hash]) {
-      return companyColors[hash];
+  function jobName (job) {
+    if (!job) {
+      return null;
     }
 
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-    if (randomColor === prevColor) {
-      return random(hash); // We just picked this color! pick another one
-    } else {
-      prevColor = randomColor;
-      companyColors[hash] = randomColor;
-      return randomColor;
-    }
+    return job.role + job.company;
   }
 </script>
 
@@ -102,10 +74,10 @@
 </style>
 
 {#each filteredJobs as job, index (`${job.start}-${job.end}`)}
-  <Job color={random(job)} {job} isFirstJob={index <= 2} />
+  <Job color={random(jobName(job), jobName(filteredJobs[index - 1]))} {job} isFirstJob={index <= 2} />
   {#if job.subjobs}
     {#each filteredSubjobs[hashSum(job)] as subjob (`${subjob.start}-${subjob.end}`)}
-      <Job color={random(subjob)} job={subjob} />
+      <Job color={random(jobName(job), jobName(filteredJobs[index - 1]))} job={subjob} />
     {/each}
     {#if showSubjobs(job, filteredSubjobs)}
       <button class="more" on:click={() => addSubjob(job)}>{job.showMore} →</button>
