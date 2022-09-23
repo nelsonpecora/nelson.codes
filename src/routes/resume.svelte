@@ -234,7 +234,7 @@
   <div class="interests">
     <a href="https://www.brooklynbattodo.com/" target="_blank" class="interest">
       <img class="interest-img" src="/zentokan.png" alt="Zentokan Dojo" />
-      <span class="interest-title">I'm the Treasurer of Zentokan Dojo, as well as an assistant instructor. I hold the rank of nidan in <em>Zen Nihon Toyama Ryu Iaido Renmei</em> (全日本戸山流居合道連盟), a Japanese organization that teaches Toyama-Ryu Battodo.</span>
+      <span class="interest-title">I'm the Treasurer of Zentokan Dojo, as well as an assistant instructor. I hold the rank of sandan in <em>Zen Nihon Toyama Ryu Iaido Renmei</em> (全日本戸山流居合道連盟), a Japanese organization that teaches Toyama-Ryu Battodo.</span>
     </a>
     <a href="https://www.usbattodo.com/" target="_blank" class="interest">
       <div class="interest-img">{@html usfbd}</div>
