@@ -1,6 +1,6 @@
 <script>
   import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
-  import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+  import { faTwitter, faGithub, faMastodon } from '@fortawesome/free-brands-svg-icons';
   import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
   import Wrapper from './Wrapper.svelte';
   import Heading from './Heading.svelte';
@@ -10,6 +10,11 @@
   const emailOscura = '\u0068\u0069\u0040\u006e\u0065\u006c\u0073\u006f\u006e\u002e\u0063\u006f\u0064\u0065\u0073';
   const socials = [
     {
+      icon: faMastodon,
+      alt: 'mastodon',
+      title: '@nelson@mainframe.club',
+      url: 'https://mainframe.club/@nelson'
+    }, {
       icon: faTwitter,
       alt: 'twitter',
       title: '@nelsonpecora',
@@ -94,7 +99,7 @@
   <ul class="socials">
     {#each socials as social}
       <li class="social">
-        <a class="social-link" href={social.url} title={social.alt}>
+        <a class="social-link" href={social.url} title={social.alt} rel="me">
           <Icon icon={social.icon} />
           <span class="social-title">{social.title}</span>
         </a>
@@ -103,10 +108,10 @@
   </ul>
 
   <webring-banner class="webring">
-    <p>Member of the <a href="https://mainframe.club">Mainframe.club</a> webring</p>
-    <a href="https://mainframe.club/prev">Previous</a>
-    <a href="https://mainframe.club/random">Random</a>
-    <a href="https://mainframe.club/next">Next</a>
+    <p>Member of the <a href="https://web.mainframe.club">Mainframe.club</a> webring</p>
+    <a href="https://web.mainframe.club/prev">Previous</a>
+    <a href="https://web.mainframe.club/random">Random</a>
+    <a href="https://web.mainframe.club/next">Next</a>
   </webring-banner>
 
   <!-- copyright notice -->
