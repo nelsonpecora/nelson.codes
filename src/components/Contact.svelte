@@ -88,6 +88,11 @@
     }
     .social {
       margin: 0;
+      flex: 1 1 50%;
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
     }
   }
 </style>
