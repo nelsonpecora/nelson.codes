@@ -10,13 +10,7 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run",
-    "deploy": "surge --project ./__sapper__/export/ --domain nelson.codes"
-  },
-  "git": {
-    "scripts": {
-      "pre-push": "yarn export && yarn deploy"
-    }
+    "test": "run-p --race dev cy:run"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
@@ -37,7 +31,6 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
-    "git-scripts": "^0.2.1",
     "npm-run-all": "^4.1.5",
     "rollup": "^1.12.0",
     "rollup-plugin-babel": "^4.0.2",
@@ -49,7 +42,6 @@
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-terser": "^4.0.4",
     "sapper": "^0.27.0",
-    "surge": "^0.21.3",
     "svelte": "^3.0.0"
   }
 }
