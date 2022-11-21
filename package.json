@@ -1,6 +1,7 @@
 {
   "name": "nelson.codes",
   "description": "Personal website for Nelson Pecora",
+  "homepage": "https://nelson.codes",
   "license": "MIT",
   "version": "0.0.1",
   "scripts": {
