@@ -37,13 +37,10 @@ export default function random (input, prevInput) {
   const prevColor = hash[hashSum(prevInput)];
 
   if (color === prevColor) {
-    console.log(`${input} (${prevInput})`, 'MATCHED')
     color = random(input, prevInput); // We just picked this color! pick another one
   }
 
   hash[hashSum(input)] = color;
-
-  console.log(`${input} (${prevInput})`, color)
 
   return color;
 }
