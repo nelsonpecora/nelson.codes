@@ -16,6 +16,7 @@
   --main3: #7d7d7d;
   --background: #ffffff;
   --background2: #f7f7f7;
+  --background3: #c5c5c5;
   --heading-font: Lora, serif;
   --body-font: "Open Sans", sans-serif;
   --code-font: "Fira Code", monospace;
@@ -26,10 +27,6 @@
   --body-size: 16px;
 }
 
-code {
-  font-family: var(--code-font);
-}
-
 body {
   font-size: var(--body-size);
   font-family: var(--body-font);
@@ -37,134 +34,197 @@ body {
   background-color: var(--background);
 }
 
-/* font sizes */
-
-#post article.norm,
-.font.norm,
-body#collection article.norm,
-body#subpage article.norm,
-input#title.norm,
-pre.norm,
-span.norm,
-textarea.norm {
-  font-family: var(--body-font);
-}
-
-body#post header h1, body#subpage header h1 {
+/* site name */
+header h1,
+body h1 a,
+body h1 a:hover {
   font-size: var(--h3-size);
-}
-
-body #post article h2#title, body#post article h2#title {
-  font-size: var(--h1-size);
-}
-
-article h2 {
-  font-size: var(--h2-size);
-}
-
-article h3 {
-  font-size: var(--h3-size);
-}
-
-article h4 {
-  font-size: var(--h4-size);
-}
-
-body#post article time.dt-published, body#collection article time.dt-published, body#subpage article time.dt-published {
-  font-size: var(--body-size);
-  font-style: italic;
-}
-
-/* colors and other styles */
-
-body h1 a, body h1 a:visited, body h1 a:link, body header h2 a, body header h2 a:visited, body header h2 a:link {
   color: var(--main);
 }
 
-body header p.description, body header nav a {
+/* post title in list of pages */
+body#collection .post-title,
+body#subpage .post-title {
+  font-size: var(--h2-size);
   color: var(--main2);
 }
 
-body .hidden.user.action {
+.post-title a,
+.post-title a:visited {
+  color: var(--main2);
+}
+
+/* post title on blog post page */
+body #post article h2#title,
+body#post article h2#title {
+  font-size: var(--h1-size);
+  color: var(--main2);
+}
+
+/* editing links */
+.hidden.user.action {
+  font-size: var(--body-size);
   opacity: 1;
   color: var(--main3);
 }
 
-body article table a:not(.hashtag), body article table a.hashtag span+span, body article p a:not(.hashtag), body article p a.hashtag span+span, body article ul a:not(.hashtag), body article ul a.hashtag span+span {
-  color: var(--main);
-  border-bottom: solid var(--accent) 1px;
-  text-decoration: none;
-  transition: border-bottom 0.12s ease;
-}
-
-body article table a:not(.hashtag):hover, body article table a:not(.hashtag):focus, body article table a.hashtag:hover span+span, body article table a.hashtag:focus span+span, body article p a:not(.hashtag):hover, body article p a:not(.hashtag):focus, body article p a.hashtag:hover span+span, body article p a.hashtag:focus span+span, body article ul a:not(.hashtag):hover, body article ul a:not(.hashtag):focus, body article ul a.hashtag:hover span+span, body article ul a.hashtag:focus span+span {
-  text-decoration: none;
-  border-color: transparent;
-}
-
-body#post a, body#post a.hashtag span+span, body#subpage a, body#subpage a.hashtag span+span {
-  border-bottom-width: 2.5px;
-}
-
-body #manage a, body .dropdown-nav a, body #manage ul a {
+/* post heading */
+article h2 {
+  font-size: var(--h2-size);
   color: var(--main);
 }
 
-body #manage ul, body .dropdown-nav ul, body #manage ul ul {
-  background: var(--background);
-}
-
-body #manage ul li:hover, body .dropdown-nav ul li:hover, body #manage ul ul li:hover {
-  background: var(--background2);
-}
-
-body #manage ul li a, body .dropdown-nav ul li a, body #manage ul ul li a {
+/* post subheading */
+article h3 {
+  font-size: var(--h3-size);
   color: var(--main);
 }
 
-body#post, body#collection, body#subpage {
+/* post sub-sub-heading */
+article h4 {
+  font-size: var(--h4-size);
   color: var(--main);
 }
 
-body#post pre, body#post code, body#collection pre, body#collection code, body#subpage pre, body#subpage code {
-  background: var(--background2);
+/* post timestamp */
+article time.dt-published {
+  font-size: var(--body-size);
+  font-style: italic;
   color: var(--main2);
 }
 
-body#post pre, body#collection pre, body#subpage pre {
-  background: var(--background2);
+/* max width */
+#post .alert,
+#post article,
+body#collection article,
+body#subpage #wrapper h1,
+body#subpage article,
+pre {
+  max-width: 45rem;
 }
 
-body#post .post-title a, body#collection .post-title a, body#subpage .post-title a {
-  color: var(--main);
+/* nav and blog desc */
+#post nav a:not(.home),
+header p.description,
+header nav a {
+  color: var(--main2);
 }
 
-body#post a.read-more, body#collection a.read-more, body#subpage a.read-more {
+body footer nav,
+body footer nav a.home:link,
+body footer nav a.home:visited,
+body footer nav a.home:hover {
   color: var(--main3);
 }
 
-body#post article time.dt-published, body#collection article time.dt-published, body#subpage article time.dt-published {
+#post nav a:not(.home),
+header nav a,
+body footer nav a.home:link,
+body footer nav a.home:visited {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  transition: text-decoration-color 200ms ease;
+}
+
+#post nav a:not(.home):hover,
+#post nav a:not(.home):focus,
+header nav a:hover,
+header nav a:focus,
+body footer nav a.home:hover,
+body footer nav a.home:focus {
+  text-decoration-color: var(--background);
+}
+
+/* code */
+body #post pre,
+body#collection pre,
+body#post pre,
+body#subpage pre,
+body #post code,
+body#collection code,
+body#post code,
+body#subpage code {
+  font-family: var(--code-font);
+  background: var(--background2);
   color: var(--main2);
 }
 
-body#post blockquote, body#collection blockquote, body#subpage blockquote {
+/* links (and second part of hashtags) */
+article a:not(.hashtag),
+article a.hashtag span+span {
+  color: var(--main);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  transition: text-decoration-color 200ms ease;
+}
+
+article a:not(.hashtag):hover,
+article a.hashtag:hover span+span,
+article a:not(.hashtag):focus,
+article a.hashtag:focus span+span {
+  text-decoration-color: var(--background);
+}
+
+/* read more link */
+body#collection a.read-more,
+body#subpage a.read-more {
+  color: var(--main3);
+}
+
+/* blockquotes */
+blockquote {
   color: var(--main2);
 }
 
-body#post .pic-container, body#collection .pic-container, body#subpage .pic-container {
+/* images */
+.pic-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-bottom: -3rem;
 }
 
-body#post .pic-container .profile-pic, body#collection .pic-container .profile-pic, body#subpage .pic-container .profile-pic {
+.pic-container .profile-pic {
   max-width: 200px;
   min-width: 100px;
   border-radius: 10%;
   padding: 1rem;
   flex-shrink: 1;
   flex-grow: 0;
+}
+
+/* horizontal rule */
+body #post article hr,
+body#collection article hr,
+body#post article hr,
+body#subpage article hr {
+  text-align: center;
+  display: block;
+  line-height: 1px;
+  height: 1px;
+  margin: 2rem 0;
+  background: var(--background3);
+}
+
+body #post article hr:before,
+body#collection article hr:before,
+body#post article hr:before,
+body#subpage article hr:before,
+body #post article hr:after,
+body#collection article hr:after,
+body#post article hr:after,
+body#subpage article hr:after {
+  content: '\00A7';
+  font-size: 2rem;
+  color: var(--background3);
+  position: absolute;
+  transform: rotate(90deg);
+}
+
+footer hr {
+  background: var(--background2);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -175,6 +235,7 @@ body#post .pic-container .profile-pic, body#collection .pic-container .profile-p
     --main3: #b1b1b1;
     --background: #0D1321;
     --background2: #1f2944;
+    --background3: #283969;
   }
 
   img {
