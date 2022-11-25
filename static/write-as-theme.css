@@ -50,8 +50,11 @@ body#subpage .post-title {
 }
 
 .post-title a,
-.post-title a:visited {
+.post-title a:visited,
+.post-title a:link,
+.post-title a:link:visited {
   color: var(--main2);
+  text-decoration: none;
 }
 
 /* post title on blog post page */
