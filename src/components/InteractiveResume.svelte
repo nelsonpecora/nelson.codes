@@ -1,5 +1,8 @@
 <script>
   import hashSum from 'hash-sum';
+  import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
+  import { faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
   import jobs from './jobs.json';
   import Job from './Job.svelte';
   import random from '../utils/colors';
@@ -50,11 +53,12 @@
 
 <style>
   .more {
+    align-items: center;
     background-color: #FBF5F3;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    display: block;
+    display: flex;
     font-size: 18px;
     margin-bottom: 10px;
     margin-left: 20px;
@@ -71,6 +75,10 @@
   .more + .more {
     margin-top: 10px;
   }
+  .arrow {
+		height: 18px;
+		margin-left: 5px;
+	}
 </style>
 
 {#each filteredJobs as job, index (`${job.start}-${job.end}`)}
@@ -80,13 +88,13 @@
       <Job color={random(jobName(job), jobName(filteredJobs[index - 1]))} job={subjob} />
     {/each}
     {#if showSubjobs(job, filteredSubjobs)}
-      <button class="more" on:click={() => addSubjob(job)}>{job.showMore} →</button>
+      <button class="more" on:click={() => addSubjob(job)}>{job.showMore} <span class="arrow"><Icon icon={faArrowRight} /></span></button>
     {/if}
     {#if showMoreSubjobs(job, filteredSubjobs)}
-      <button class="more" on:click={() => addSubjob(job)}>{job.showEvenMore} →</button>
+      <button class="more" on:click={() => addSubjob(job)}>{job.showEvenMore} <span class="arrow"><Icon icon={faArrowRight} /></span></button>
     {/if}
   {/if}
 {/each}
 {#if showMoreJobs}
-  <button class="more" on:click={addJob}>Before that ↓</button>
+  <button class="more" on:click={addJob}>Before that <span class="arrow"><Icon icon={faArrowDown} /></span></button>
 {/if}

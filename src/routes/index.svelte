@@ -1,5 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
+	import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
+  import { faArrowDown, faLongArrowAltDown } from '@fortawesome/free-solid-svg-icons';
+
 	import Wrapper from '../components/Wrapper.svelte';
 	import Header from '../components/Header.svelte';
 	import Heading from '../components/Heading.svelte';
@@ -27,11 +30,18 @@
 
 <style>
 	.intro {
+		align-items: center;
 		bottom: 70px;
+		display: flex;
 		font-size: 24px;
+		justify-content: center;
 		position: absolute;
 		text-align: center;
 		width: 100%;
+	}
+	.intro-arrow-down {
+		height: 24px;
+		margin-left: 7px;
 	}
 	.projects {
 		align-items: flex-start;
@@ -42,12 +52,13 @@
 	}
 
 	.more {
+		align-items: center;
     background-color: #FBF5F3;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    display: block;
-    font-size: 20px;
+    display: flex;
+    font-size: 22px;
     margin: 0 auto;
     outline: none;
     padding: 10px 15px;
@@ -62,6 +73,10 @@
   .more + .more {
     margin-top: 10px;
   }
+	.arrow-down {
+		height: 22px;
+		margin-left: 5px;
+	}
 
 	@media screen and (min-width: 770px) {
 		.projects {
@@ -80,7 +95,7 @@
 
 <Wrapper splash={true} theme="dark">
 	<Header sticky={false} theme="dark" />
-	<a class="intro" href="#second" on:click={scroll}>Hi, I'm Nelson and I architect Content Management Systems ↓</a>
+	<a class="intro" href="#second" on:click={scroll}>Hi, I'm Nelson and I architect Content Management Systems <span class="intro-arrow-down"><Icon icon={faLongArrowAltDown} /></span></a>
 </Wrapper>
 
 <Wrapper>
@@ -92,7 +107,7 @@
 			{/each}
 		</div>
 		{#if showMore}
-			<button class="more" on:click={addProjects}>Earlier projects ↓</button>
+			<button class="more" on:click={addProjects}>Earlier projects <span class="arrow-down"><Icon icon={faArrowDown} /></span></button>
 		{/if}
 	</div>
 </Wrapper>

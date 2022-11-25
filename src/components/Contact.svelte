@@ -1,7 +1,7 @@
 <script>
   import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
-  import { faTwitter, faGithub, faMastodon } from '@fortawesome/free-brands-svg-icons';
-  import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+  import { faTwitter, faGithub, faMastodon, faInstagram, faTiktok, faTumblr, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+  import { faEnvelope, faEgg, faRss } from '@fortawesome/free-solid-svg-icons';
   import Wrapper from './Wrapper.svelte';
   import Heading from './Heading.svelte';
 
@@ -10,42 +10,102 @@
   const emailOscura = '\u0068\u0069\u0040\u006e\u0065\u006c\u0073\u006f\u006e\u002e\u0063\u006f\u0064\u0065\u0073';
   const socials = [
     {
-      icon: faMastodon,
-      alt: 'mastodon',
-      title: '@nelson@mainframe.club',
-      url: 'https://mainframe.club/@nelson'
+      category: 'Short Words',
+      items: [{
+        icon: faMastodon,
+        alt: 'mastodon',
+        title: 'nelson@mainframe.club',
+        url: 'https://mainframe.club/@nelson'
+      }, {
+        icon: faTwitter,
+        alt: 'twitter',
+        title: 'nelsonpecora',
+        url: 'https://twitter.com/nelsonpecora'
+      }]
     }, {
-      icon: faTwitter,
-      alt: 'twitter',
-      title: '@nelsonpecora',
-      url: 'https://twitter.com/nelsonpecora'
+      category: 'Longer Words',
+      items: [{
+        icon: faRss,
+        alt: 'blog',
+        title: 'blog.nelson.codes',
+        url: 'https://blog.nelson.codes'
+      }, {
+        icon: faTumblr,
+        alt: 'tumblr',
+        title: 'nelsonpecora',
+        url: 'https://nelsonpecora.tumblr.com/'
+      }, {
+        icon: faEgg,
+        alt: 'cohost',
+        title: 'nelsonpecora',
+        url: 'https://cohost.org/nelsonpecora'
+      }]
     }, {
-      icon: faGithub,
-      alt: 'github',
-      title: 'nelsonpecora',
-      url: 'https://github.com/nelsonpecora'
+      category: 'Worth a Thousand Words',
+      items: [{
+        icon: faInstagram,
+        alt: 'instagram',
+        title: 'nelsonpecora',
+        url: 'https://www.instagram.com/nelsonpecora/'
+      }, {
+        icon: faTiktok,
+        alt: 'tiktok',
+        title: 'nelsonpecora',
+        url: 'https://www.tiktok.com/@nelsonpecora'
+      }]
     }, {
-      icon: faEnvelope,
-      alt: 'email',
-      title: emailOscura,
-      url: `javascript:location="mailto:${emailOscura}";void 0`
+      category: 'Business Words',
+      items: [{
+        icon: faGithub,
+        alt: 'github',
+        title: 'nelsonpecora',
+        url: 'https://github.com/nelsonpecora'
+      }, {
+        icon: faLinkedin,
+        alt: 'linkedin',
+        title: 'npecora',
+        url: 'https://www.linkedin.com/in/npecora/'
+      }, {
+        icon: faEnvelope,
+        alt: 'email',
+        title: emailOscura,
+        url: `javascript:location="mailto:${emailOscura}";void 0`
+      }]
     }
   ]
 </script>
 
 <style>
   .socials {
-    align-items: center;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    margin: 20px 0;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0;
     padding: 0;
   }
   .social {
-    display: inline-block;
-    flex: 0 0 auto;
+    display: flex;
+    flex: 0 0 100%;
+    flex-flow: row wrap;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+  .social-category {
+    flex: 0 0 100%;
     margin: 0 0 10px;
+  }
+  .social-items {
+    display: flex;
+    flex: 0 0 100%;
+    flex-flow: row wrap;
+    margin: 0 0 30px;
+    padding: 0;
+  }
+  .social-item {
+    display: inline-block;
+    flex: 0 0 100%;
+    margin: 0;
     list-style: none;
     padding: 0;
   }
@@ -80,19 +140,13 @@
     text-align: center;
   }
   @media screen and (min-width: 630px) {
-    .socials {
-      align-items: flex-start;
-      flex-flow: row wrap;
+    .social-items {
       justify-content: space-between;
-      margin: 40px 0;
+      margin: 0 0 40px;
     }
-    .social {
-      margin: 0;
-      flex: 1 1 50%;
-      align-items: center;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
+    .social-item {
+      display: inline-flex;
+      flex: 0 0 40%;
     }
   }
 </style>
@@ -100,14 +154,21 @@
 <Wrapper theme="grey">
   <Heading title="Contact Me" anchor="contact" />
 
-  <!-- twitter, github, email -->
+  <!-- twitter, github, email, etc -->
   <ul class="socials">
     {#each socials as social}
       <li class="social">
-        <a class="social-link" href={social.url} title={social.alt} rel="me">
-          <Icon icon={social.icon} />
-          <span class="social-title">{social.title}</span>
-        </a>
+        <h3 class="social-category">{social.category}</h3>
+        <ul class="social-items">
+          {#each social.items as item}
+            <li class="social-item">
+              <a class="social-link" href={item.url} title={item.alt} rel="me">
+                <Icon icon={item.icon} />
+                <span class="social-title">{item.title}</span>
+              </a>
+            </li>
+          {/each}
+        </ul>
       </li>
     {/each}
   </ul>

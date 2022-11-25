@@ -34,9 +34,8 @@
   }
 
   .title {
-    font-size: 20px;
-    font-weight: bold;
     margin: 20px 0 10px;
+    padding: 0;
   }
 
   .desc {
@@ -53,7 +52,7 @@
 <a class="project" href={link} target="_blank" transition:fade>
   <div class="bg" style={`background-image: url(${img})`} />
   <div class="info">
-    <p class="title">{title}</p>
+    <h3 class="title">{title}</h3>
     <p class="desc">{desc}</p>
   </div>
 </a>

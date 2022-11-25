@@ -19,7 +19,7 @@
 
 <style>
   nav {
-    font-family: 'Vast Shadow', cursive;
+    font-family: var(--heading-font);
     padding: 20px 0;
     width: 100%;
   }

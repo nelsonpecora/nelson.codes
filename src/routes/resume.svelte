@@ -163,7 +163,7 @@
     flex: 1 0 300px;
     flex-flow: column nowrap;
     justify-content: center;
-    margin: 0 20px 30px;
+    margin: 0 20px 50px;
   }
   .interest + .interest {
     margin-left: 20px;

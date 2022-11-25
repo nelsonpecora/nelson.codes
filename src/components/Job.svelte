@@ -59,7 +59,7 @@
   {#if isCircleShown}
     <div class="circle" style={`background-color: ${color};`} transition:scale />
   {/if}
-  <p class="title">
+  <h3 class="title">
     {role}
     {#if company}
       <span class="icon" style={`color: ${color};`}>
@@ -67,7 +67,7 @@
       </span>
       {company}
     {/if}
-  </p>
+  </h3>
   <p class="subtitle">{place} · <em>{start} – {end}</em></p>
   <p class="desc">{desc}</p>
 </div>
