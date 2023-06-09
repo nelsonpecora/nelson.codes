@@ -1,7 +1,7 @@
 <script>
   import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
   import { faTwitter, faGithub, faMastodon, faInstagram, faTiktok, faTumblr, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-  import { faEnvelope, faEgg, faRss } from '@fortawesome/free-solid-svg-icons';
+  import { faEnvelope, faEgg, faRss, faCloud } from '@fortawesome/free-solid-svg-icons';
   import Wrapper from './Wrapper.svelte';
   import Heading from './Heading.svelte';
 
@@ -16,6 +16,11 @@
         alt: 'mastodon',
         title: 'nelson@mainframe.club',
         url: 'https://mainframe.club/@nelson'
+      }, {
+        icon: faCloud,
+        alt: 'bluesky',
+        title: '@nelson.codes',
+        url: 'https://bsky.app/profile/nelson.codes'
       }, {
         icon: faTwitter,
         alt: 'twitter',
