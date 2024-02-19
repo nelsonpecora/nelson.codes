@@ -1,13 +1,22 @@
-# nelson.codes
+# Welcome to Remix!
 
-This is the repo for my personal website. It's mostly static content, but I wanted to try out [svelte.js](https://svelte.dev/) and its all-in-one framework, [sapper](https://sapper.svelte.dev/).
-
-## Layout
-
-* Homepage — A good splash page is still useful, even in the post-postmodern web. This shows off the latest cool stuff I've built, along with my old portfolio of client projects.
-* Resume — I want to experiment with different portrayals of "resume" information, since the web is much more flexible than a greyscale piece of printer paper. Currently the resume is heavily inspired by [twine games](https://twinery.org/).
-* That's it! — personal websites should be lean and mean.
+- [Remix Docs](https://remix.run/docs)
 
 ## Development
 
-Github builds and deploys to Github Pages when pushing to `main`.
+You will be utilizing Wrangler for local development to emulate the Cloudflare runtime. This is already wired up in your package.json as the `dev` script:
+
+```sh
+# start the remix dev server and wrangler
+npm run dev
+```
+
+Open up [http://127.0.0.1:8788](http://127.0.0.1:8788) and you should be ready to go!
+
+## Deployment
+
+Cloudflare Pages are currently only deployable through their Git provider integrations.
+
+If you don't already have an account, then [create a Cloudflare account here](https://dash.cloudflare.com/sign-up/pages) and after verifying your email address with Cloudflare, go to your dashboard and follow the [Cloudflare Pages deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-anything).
+
+Configure the "Build command" should be set to `npm run build`, and the "Build output directory" should be set to `public`.

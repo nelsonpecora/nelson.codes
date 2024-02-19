@@ -1,5 +1,5 @@
 <script>
-  import Icon from '../../node_modules/fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
+  import Icon from 'fa-svelte'; // https://github.com/alphapeter/fa-svelte/issues/5
   import {
     faTwitter,
     faGithub,
