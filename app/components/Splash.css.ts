@@ -1,6 +1,15 @@
 import { style } from '@vanilla-extract/css';
 
+const glowingLink = style({
+  color: 'var(--bg-color)',
+  transition: 'text-shadow 250ms ease-out',
+  ':hover': {
+    textShadow: '0 0 8px var(--glow)',
+  },
+});
+
 export const root = style({
+  background: 'url(/nebula.png)',
   alignItems: 'center',
   display: 'flex',
   height: '100vh',
@@ -26,9 +35,12 @@ export const nav = style({
   },
 });
 
-export const link = style({
-  margin: '20px',
-});
+export const link = style([
+  glowingLink,
+  {
+    margin: '20px',
+  },
+]);
 
 export const logo = style({
   display: 'block',
@@ -41,15 +53,20 @@ export const logo = style({
   },
 });
 
-export const cta = style({
-  bottom: '70px',
-  position: 'absolute',
-  textAlign: 'center',
-  color: 'var(--bg-color)',
-  width: '100%',
-});
+export const cta = style([
+  glowingLink,
+  {
+    bottom: '70px',
+    position: 'absolute',
+    textAlign: 'center',
+    width: '100%',
+    fontFamily: 'var(--heading-font)',
+  },
+]);
 
 export const ctaArrow = style({
+  display: 'inline-block',
   height: '24px',
+  width: '24px',
   marginLeft: '7px',
 });

@@ -23,7 +23,7 @@ export const links: LinksFunction = () => [
   },
   {
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Fira+Code&family=Lora:wght@700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap',
+    href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans:ital@0;1&family=Chakra+Petch:wght@600&display=swap',
   },
   { rel: 'stylesheet', href: globalStyles },
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),

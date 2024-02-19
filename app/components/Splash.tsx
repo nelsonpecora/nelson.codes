@@ -20,7 +20,7 @@ export default function Splash() {
         </Link>
       </nav>
       <Link to={{ hash: 'second' }} className={css.cta}>
-        Hi, I'm Nelson and I architect Content Management Systems
+        Previous Launches
         <span className={css.ctaArrow}>
           <Icon icon={faLongArrowDown} />
         </span>

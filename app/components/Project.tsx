@@ -1,5 +1,8 @@
 export type ProjectType = {
-  name: string;
+  title: string;
+  desc: string;
+  img: string;
+  link: string;
 };
 
 type ProjectProps = {
