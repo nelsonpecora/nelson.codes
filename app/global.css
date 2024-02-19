@@ -5,8 +5,19 @@
   --code-font: 'Fira Code', monospace;
 }
 
+/* Color scheme: Light mode */
+html {
+  --text-color: #0d1321;
+  --code-color: #555;
+  --code-bg-color: #f0f0f0;
+  --bg-color: #fbf5f3;
+}
+
 html {
   box-sizing: border-box;
+  background-color: var(--bg-color);
+  background-image: url(/starfield.png);
+  background-repeat: repeat;
 }
 
 *,
@@ -20,7 +31,7 @@ body {
   font-family: var(--body-font);
   font-size: 16px;
   line-height: 1.5;
-  color: #0d1321;
+  color: var(--text-color);
 }
 
 h1,
@@ -59,17 +70,16 @@ a {
 code {
   font-family: var(--code-font);
   font-size: calc(1em - 2px);
-  color: #555;
-  background-color: #f0f0f0;
+  color: var(--code-color);
+  background-color: var(--code-bg-color);
   padding: 0.2em 0.4em;
   border-radius: 2px;
 }
 
-.logo-small,
-.logo-large,
-.logo-usfbd {
-  height: 100%;
-  width: 100%;
+main {
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
 @media (min-width: 400px) {

@@ -19,3 +19,7 @@ npm run dev
 That will launch a dev server running on [localhost:8788](http://127.0.0.1:8788) with HMR and all that good stuff.
 
 Cloudflare automatically builds and deploys the `main` branch to [nelson.codes](https://nelson.codes), and pull requests get preview builds as well.
+
+## Credits
+
+Space background art created by Screaming Brain Studios.
