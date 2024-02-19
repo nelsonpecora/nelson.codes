@@ -1,5 +1,6 @@
 /* Original theme by Gabriel Augendre (c 2020). Modified by
-   Nelson Pecora (c 2022).
+   Nelson Pecora (c 2022). This theme is used for blog.nelson.codes
+   and exists in this repo so I can track changes to it.
 
  This theme is licensed under the GNU General Public License v3.
 
@@ -11,15 +12,15 @@
 
 :root {
   --accent: #226997;
-  --main: #0D1321;
+  --main: #0d1321;
   --main2: #444444;
   --main3: #7d7d7d;
   --background: #ffffff;
   --background2: #f7f7f7;
   --background3: #c5c5c5;
   --heading-font: Lora, serif;
-  --body-font: "Open Sans", sans-serif;
-  --code-font: "Fira Code", monospace;
+  --body-font: 'Open Sans', sans-serif;
+  --code-font: 'Fira Code', monospace;
   --h1-size: 50px;
   --h2-size: 36px;
   --h3-size: 24px;
@@ -155,7 +156,7 @@ body#subpage code {
 
 /* links (and second part of hashtags) */
 article a:not(.hashtag),
-article a.hashtag span+span {
+article a.hashtag span + span {
   color: var(--main);
   text-decoration: underline;
   text-decoration-color: var(--accent);
@@ -164,9 +165,9 @@ article a.hashtag span+span {
 }
 
 article a:not(.hashtag):hover,
-article a.hashtag:hover span+span,
+article a.hashtag:hover span + span,
 article a:not(.hashtag):focus,
-article a.hashtag:focus span+span {
+article a.hashtag:focus span + span {
   text-decoration-color: var(--background);
 }
 
@@ -236,7 +237,7 @@ footer hr {
     --main: #eeeeee;
     --main2: #cecece;
     --main3: #b1b1b1;
-    --background: #0D1321;
+    --background: #0d1321;
     --background2: #1f2944;
     --background3: #283969;
   }

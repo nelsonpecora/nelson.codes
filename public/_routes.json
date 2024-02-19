@@ -1,5 +1,17 @@
 {
   "version": 1,
   "include": ["/*"],
-  "exclude": ["/favicon.ico", "/build/*"]
+  "exclude": [
+    "/build/*",
+    "/favicon.png",
+    "/logo-192.png",
+    "/logo-512.png",
+    "/logo-large.svg",
+    "/logo-small.svg",
+    "/logo-social.png",
+    "/manifest.json",
+    "/resume.pdf",
+    "/robots.txt",
+    "/sitemap.xml"
+  ]
 }

@@ -16,20 +16,24 @@
     "desc": "Lead architect of Alexandria, Newsela's content management system. I built and mentored a team of engineers, designers, and product managers and led cross-departmental initiatives with direct business impact.",
     "showMore": "My last role",
     "showEvenMore": "My previous role",
-    "subjobs": [{
-      "start": "August 2021",
-      "end": "August 2022",
-      "place": "New York, NY",
-      "role": "Principal Software Engineer",
-      "desc": "Continued to architect and guide the roadmap of Alexandria. I advocated for and led long-term company initiatives and made critical infrastructure decisions."
-    }, {
-      "start": "December 2018",
-      "end": "August 2021",
-      "place": "New York, NY",
-      "role": "Lead Web Applications Developer",
-      "desc": "I designed a graph-based content model for educational materials and coordinated long-term roadmaps with multiple editorial and product stakeholders."
-    }]
-  }, {
+    "subjobs": [
+      {
+        "start": "August 2021",
+        "end": "August 2022",
+        "place": "New York, NY",
+        "role": "Principal Software Engineer",
+        "desc": "Continued to architect and guide the roadmap of Alexandria. I advocated for and led long-term company initiatives and made critical infrastructure decisions."
+      },
+      {
+        "start": "December 2018",
+        "end": "August 2021",
+        "place": "New York, NY",
+        "role": "Lead Web Applications Developer",
+        "desc": "I designed a graph-based content model for educational materials and coordinated long-term roadmaps with multiple editorial and product stakeholders."
+      }
+    ]
+  },
+  {
     "start": "June 2014",
     "end": "December 2018",
     "place": "New York, NY",

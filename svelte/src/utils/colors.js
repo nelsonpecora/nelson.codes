@@ -15,15 +15,14 @@ const colors = [
   '#DACC3E',
   '#E96E5D',
   '#F58A07',
-  '#04724D'
+  '#04724D',
 ];
 
 // This is a hash of colors, so we don't use the different ones for the same
 // thing.
 let hash = {};
 
-
-export default function random (input, prevInput) {
+export default function random(input, prevInput) {
   const inputHash = hashSum(input);
 
   // If we've already generated a color, return it.
