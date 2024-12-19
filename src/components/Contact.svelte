@@ -8,13 +8,9 @@
     faTiktok,
     faTumblr,
     faLinkedin,
+    faBluesky,
   } from '@fortawesome/free-brands-svg-icons';
-  import {
-    faEnvelope,
-    faEgg,
-    faRss,
-    faAt,
-  } from '@fortawesome/free-solid-svg-icons';
+  import {faEnvelope, faEgg, faRss} from '@fortawesome/free-solid-svg-icons';
   import Wrapper from './Wrapper.svelte';
   import Heading from './Heading.svelte';
 
@@ -33,7 +29,7 @@
           url: 'https://mainframe.club/@nelson',
         },
         {
-          icon: faAt,
+          icon: faBluesky,
           alt: 'bluesky',
           title: '@nelson.codes',
           url: 'https://bsky.app/profile/nelson.codes',
