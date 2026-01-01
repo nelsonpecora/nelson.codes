@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to Github Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
-        uses: peaceiris/actions-gh-pages@master
+        uses: peaceiris/actions-gh-pages@v4
         with:
           publish_dir: __sapper__/export
           publish_branch: gh-pages
