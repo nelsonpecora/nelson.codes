@@ -1,0 +1,264 @@
+/* Original theme by Gabriel Augendre (c 2020). Modified by
+   Nelson Pecora (c 2022).
+
+ This theme is licensed under the GNU General Public License v3.
+
+ You should have received a copy of the license along with this
+ work. If not, see https://www.gnu.org/licenses/gpl-3.0.en.html
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --accent: #226997;
+  --main: #0D1321;
+  --main2: #444444;
+  --main3: #7d7d7d;
+  --background: #ffffff;
+  --background2: #f7f7f7;
+  --background3: #c5c5c5;
+  --heading-font: Lora, serif;
+  --body-font: "Open Sans", sans-serif;
+  --code-font: "Fira Code", monospace;
+  --h1-size: 50px;
+  --h2-size: 36px;
+  --h3-size: 24px;
+  --h4-size: 18px;
+  --body-size: 16px;
+}
+
+body {
+  font-size: var(--body-size);
+  font-family: var(--body-font);
+  color: var(--main);
+  background-color: var(--background);
+}
+
+/* site name */
+header h1,
+body h1 a,
+body h1 a:hover {
+  font-size: var(--h3-size);
+  color: var(--main);
+}
+
+/* post title in list of pages */
+body#collection .post-title,
+body#subpage .post-title {
+  font-size: var(--h2-size);
+  color: var(--main2);
+}
+
+.post-title a,
+.post-title a:visited,
+.post-title a:link,
+.post-title a:link:visited {
+  color: var(--main2);
+  text-decoration: none;
+}
+
+/* post title on blog post page */
+body #post article h2#title,
+body#post article h2#title {
+  font-size: var(--h1-size);
+  color: var(--main2);
+}
+
+/* editing links */
+.hidden.user.action {
+  font-size: var(--body-size);
+  opacity: 1;
+  color: var(--main3);
+}
+
+/* post heading */
+article h2 {
+  font-size: var(--h2-size);
+  color: var(--main);
+}
+
+/* post subheading */
+article h3 {
+  font-size: var(--h3-size);
+  color: var(--main);
+}
+
+/* post sub-sub-heading */
+article h4 {
+  font-size: var(--h4-size);
+  color: var(--main);
+}
+
+/* post timestamp */
+article time.dt-published {
+  font-size: var(--body-size);
+  font-style: italic;
+  color: var(--main2);
+}
+
+/* max width */
+#post .alert,
+#post article,
+body#collection article,
+body#subpage #wrapper h1,
+body#subpage article,
+pre {
+  max-width: 45rem;
+}
+
+/* nav and blog desc */
+#post nav a:not(.home),
+header p.description,
+header nav a {
+  color: var(--main2);
+}
+
+body footer nav,
+body footer nav a.home:link,
+body footer nav a.home:visited,
+body footer nav a.home:hover {
+  color: var(--main3);
+}
+
+#post nav a:not(.home),
+header nav a,
+body footer nav a.home:link,
+body footer nav a.home:visited {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  transition: text-decoration-color 200ms ease;
+}
+
+#post nav a:not(.home):hover,
+#post nav a:not(.home):focus,
+header nav a:hover,
+header nav a:focus,
+body footer nav a.home:hover,
+body footer nav a.home:focus {
+  text-decoration-color: var(--background);
+}
+
+/* code */
+body #post pre,
+body#collection pre,
+body#post pre,
+body#subpage pre,
+body #post code,
+body#collection code,
+body#post code,
+body#subpage code {
+  font-family: var(--code-font);
+  background: var(--background2);
+  color: var(--main2);
+}
+
+/* links (and second part of hashtags) */
+article a:not(.hashtag),
+article a.hashtag span+span {
+  color: var(--main);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  transition: text-decoration-color 200ms ease;
+}
+
+article a:not(.hashtag):hover,
+article a.hashtag:hover span+span,
+article a:not(.hashtag):focus,
+article a.hashtag:focus span+span {
+  text-decoration-color: var(--background);
+}
+
+/* read more link */
+body#collection a.read-more,
+body#subpage a.read-more {
+  color: var(--main3);
+}
+
+/* blockquotes */
+blockquote {
+  color: var(--main2);
+}
+
+/* images */
+.pic-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: -3rem;
+}
+
+.pic-container .profile-pic {
+  max-width: 200px;
+  min-width: 100px;
+  border-radius: 10%;
+  padding: 1rem;
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+
+/* horizontal rule */
+body #post article hr,
+body#collection article hr,
+body#post article hr,
+body#subpage article hr {
+  text-align: center;
+  display: block;
+  line-height: 1px;
+  height: 1px;
+  margin: 2rem 0;
+  background: var(--background3);
+}
+
+body #post article hr:before,
+body#collection article hr:before,
+body#post article hr:before,
+body#subpage article hr:before,
+body #post article hr:after,
+body#collection article hr:after,
+body#post article hr:after,
+body#subpage article hr:after {
+  content: '\00A7';
+  font-size: 2rem;
+  color: var(--background3);
+  position: absolute;
+  transform: rotate(90deg);
+}
+
+footer hr {
+  background: var(--background2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #226997;
+    --main: #eeeeee;
+    --main2: #cecece;
+    --main3: #b1b1b1;
+    --background: #0D1321;
+    --background2: #1f2944;
+    --background3: #283969;
+  }
+
+  img {
+    opacity: 0.75;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  img:hover {
+    opacity: 1;
+  }
+
+  #manage ul ul li img {
+    opacity: 1;
+    filter: invert(1);
+  }
+}
+
+@media (min-width: 600px) {
+  :root {
+    --body-size: 18px;
+    --h4-size: 20px;
+  }
+}

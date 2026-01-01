@@ -1,0 +1,77 @@
+/* fonts and stuff */
+:root {
+	--heading-font: Lora, serif;
+	--body-font: "Open Sans", sans-serif;
+	--code-font: "Fira Code", monospace;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	font-family: var(--body-font);
+	font-size: 16px;
+	line-height: 1.5;
+	color: #0D1321;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	line-height: 1.2;
+	font-family: var(--heading-font);
+	margin: 0;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+code {
+	font-family: var(--code-font);
+	font-size: calc(1em - 2px);
+	color: #555;
+	background-color: #f0f0f0;
+	padding: 0.2em 0.4em;
+	border-radius: 2px;
+}
+
+.logo-small,
+.logo-large,
+.logo-usfbd {
+	height: 100%;
+	width: 100%;
+}
+
+@media (min-width: 400px) {
+
+	body {
+		font-size: 18px;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+}
