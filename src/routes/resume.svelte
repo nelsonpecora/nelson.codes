@@ -23,6 +23,66 @@
   const { session } = stores();
   const parser = new UAParser($session['user-agent']);
   const skills = [{
+    icon: () => DiTrello,
+    title: 'Engineering Management',
+    items: [
+      'Agile Development',
+      'SCRUM',
+      'Kanban',
+      'OKR Strategy',
+      'Data-driven decision making',
+      'Product Roadmapping',
+      'Performance reviews',
+      'Promotions',
+      'Hiring & Onboarding',
+      'Performance Calibration',
+      'Goal-setting',
+      'Career mentorship',
+      'Cross-organizational alignment',
+      'DACI',
+      'SWOT Analysis',
+      'OODA Loop'
+    ]
+  },{
+    icon: () => DiTerminal,
+    title: 'Software Architecture',
+    items: [
+      'Platform engineering',
+      'GraphQL API design',
+      'ReST API design',
+      'Modular CMS Design',
+      'Technical documentation',
+      'Knowledge base maintenance',
+      'Observability & monitoring',
+      'Performance & Scaling optimization',
+      'Security best practices',
+      'Infrastructure as Code',
+    ]
+  }, {
+    icon: () => DiCode,
+    title: 'Programming',
+    items: [
+      'Vue',
+      'React',
+      'Svelte',
+      'Sass',
+      'CSS-In-JS',
+      'Node.js',
+      'Node CLI Tooling',
+      'Apollo',
+      'Dgraph',
+      'Redis',
+      'Prosemirror',
+      'Test-Driven Development',
+      'Socrates & Databricks',
+      'Splunk',
+      'Typescript',
+      'Java',
+      'Python',
+      'Go',
+      'Rust'
+    ]
+  }, {
     icon: () => {
       const { type } = parser.getDevice();
 
@@ -54,64 +114,19 @@
       'Data Visualization',
       'A11y & WCAG Accessibility',
       'Tutorial Design',
-      'CLI Tooling UX'
-    ]
-  }, {
-    icon: () => DiCode,
-    title: 'Development',
-    items: [
-      'Vue',
-      'React',
-      'Svelte',
-      'Sass',
-      'CSS-In-JS',
-      'Node.js',
-      'Node CLI Tooling',
-      'Apollo',
-      'Dgraph',
-      'Neo4J',
-      'Graph Databases',
-      'Redis',
-      'Prosemirror',
-      'Test-Driven Development'
-    ]
-  }, {
-    icon: () => DiTerminal,
-    title: 'Software Architecture',
-    items: [
-      'ReST API Design',
-      'GraphQL API Design',
-      'SPA Architecture',
-      'SSR Architecture',
-      'Static Site Generators',
-      'CI/CD Workflows',
-      'Open Source Library Management',
-      'Modular CMS Design',
-      'Graph Data Modeling',
-      'Data Migration & Tooling',
-      'Technical Documentation'
-    ]
-  }, {
-    icon: () => DiTrello,
-    title: 'Product Management',
-    items: [
-      'Agile Development',
-      'SCRUM',
-      'Kanban',
-      'OKR Strategy',
-      'Product Roadmapping',
-      'GTM Strategy',
-      'UAT Best Practices'
+      'CLI Tooling UX',
+      'Rich text interfaces'
     ]
   }]
 </script>
 
 <style>
-  .bslg {
-    margin: 0 auto;
+  .bslg, .bslg-intro {
+    flex: 0 0 100%;
     max-width: 600px;
+    margin: 20px auto;
   }
-  .bslg-hed {
+  .bslg-hed, .bslg-txt, .bslg-intro {
     width: 100%;
     text-align: center;
   }
@@ -178,6 +193,15 @@
     font-size: 20px;
     margin: 10px 0 0;
   }
+
+  @media screen and (min-width: 1024px) {
+		.bslg {
+      flex: 0 0 50%;
+      max-width: 320px;
+      margin: 20px 0;
+      justify-self: space-between;
+    }
+	}
 </style>
 
 <svelte:head>
@@ -189,22 +213,30 @@
 </svelte:head>
 
 <Header theme="dark" />
-<Wrapper splash={true} theme="dark">
-  <Heading title="“Brilliancy, Speed, Lightness, Glory”" />
-	<p class="bslg">A mantra taken from Bruce Sterling’s <em>The Caryatids</em>, a dystopic novel about recovering from the climate crisis. To me, this represents everything I strive for as a developer.</p>
+<Wrapper splash={true} theme="dark" resume={true}>
+  <Heading title="“Brilliancy, Speed, Lightness, Glory”" center={true}/>
+  <p class="bslg-intro">A mantra taken from Bruce Sterling’s <em>The Caryatids</em>, a dystopic novel about recovering from the climate crisis. To me, this represents everything I strive for as a developer.</p>
 
-  <h3 class="bslg-hed">Brilliancy</h3>
-  <p class="bslg">Wit, lateral thinking, and epiphanies. The ability to solve an intractable problem with an ingenious solution</p>
+  <section class="bslg">
+    <h3 class="bslg-hed">Brilliancy</h3>
+    <p class="bslg-txt">Wit, lateral thinking, and epiphanies. The ability to solve an intractable problem with an ingenious solution</p>
+  </section>
 
-  <h3 class="bslg-hed">Speed</h3>
-  <p class="bslg">Not just working quickly, but being able to break work down into iterable tasks. Slow is smooth, smooth is fast</p>
+  <section class="bslg">
+    <h3 class="bslg-hed">Speed</h3>
+    <p class="bslg">Not just working quickly, but being able to break work down into iterable tasks. Slow is smooth, smooth is fast</p>
+  </section>
 
-  <h3 class="bslg-hed">Lightness</h3>
-  <p class="bslg">Iteration, modular architecture, and legible code. If you can work on a project and hand it to another developer without them wanting to stab you, you’re doing it right</p>
+  <section class="bslg">
+    <h3 class="bslg-hed">Lightness</h3>
+    <p class="bslg">Iteration, modular architecture, and legible code. If you can work on a project and hand it to another developer without them wanting to stab you, you’re doing it right</p>
+  </section>
 
-  <h3 class="bslg-hed">Glory</h3>
-  <p class="bslg">The transcendent quality that separates the good from the amazing, the little touches that change the way we think about UIs, and the reason we describe some products as “magical and revolutionary”</p>
-</Wrapper>
+  <section class="bslg">
+    <h3 class="bslg-hed">Glory</h3>
+    <p class="bslg-txt">The transcendent quality that separates the good from the amazing, the little touches that change the way we think about UIs, and the reason we describe some products as “magical and revolutionary”</p>
+  </section>
+  </Wrapper>
 
 <Wrapper>
 	<a class="pdf-button" href="/resume.pdf" target="_blank">
@@ -234,11 +266,11 @@
   <div class="interests">
     <a href="https://www.brooklynbattodo.com/" target="_blank" class="interest">
       <img class="interest-img" src="/zentokan.png" alt="Zentokan Dojo" />
-      <span class="interest-title">I'm the Treasurer of Zentokan Dojo, as well as an assistant instructor. I hold the rank of sandan in <em>Zen Nihon Toyama Ryu Iaido Renmei</em> (全日本戸山流居合道連盟), a Japanese organization that teaches Toyama-Ryu Battodo.</span>
+      <span class="interest-title">I'm the Treasurer of Zentokan Dojo, as well as an assistant instructor. I hold the rank of yondan in <em>Zen Nihon Toyama Ryu Iaido Renmei</em> (全日本戸山流居合道連盟) and nidan in the <em>International Battodo Federation</em> (国際抜刀道連盟), two Japanese organizations that teach Toyama-Ryu and Nakamura-Ryu Battodo.</span>
     </a>
     <a href="https://www.usbattodo.com/" target="_blank" class="interest">
       <div class="interest-img">{@html usfbd}</div>
-      <span class="interest-title">I am the Media Director and hold the rank of nidan in the U.S. Federation of Battodo (全米抜刀道連盟), an organization that brings together various schools of Japanese swordsmanship.</span>
+      <span class="interest-title">I am the Media and Membership Director and hold the rank of sandan in the U.S. Federation of Battodo (全米抜刀道連盟), an organization that brings together various schools of Japanese swordsmanship in the United States.</span>
     </a>
     <a href="http://prime.paxsite.com/what-is-pax" target="_blank" class="interest">
       <img class="interest-img" src="/pax.jpg" alt="Penny Arcade Expo" />

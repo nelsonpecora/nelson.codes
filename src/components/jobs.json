@@ -2,10 +2,25 @@
   {
     "start": "August 2022",
     "end": "Present",
-    "place": "New York, NY",
-    "role": "Principle Software Engineer",
+    "place": "Remote",
+    "role": "Senior Engineering Manager",
     "company": "Atlassian",
-    "desc": "P60 in the Confluence Enterprise Platform Group. I led initiatives to increase performance and scalability of Confluence Cloud, mentored and supported three teams of 30+ engineers, and launched multiple internal tools to reduce performance degradations and improve developer productivity."
+    "showMore": "My current role",
+    "showEvenMore": "My previous role",
+    "subjobs": [{
+      "start": "August 2025",
+      "end": "Present",
+      "place": "Remote",
+      "role": "Senior Engineering Manager",
+      "desc": "I Saved $500k+ per year in internal R&D costs while reducing friction throughout the development loop. As the Developer Productivity Champion for Confluence, I worked with Jira, Bitbucket, and Trello Heads of Engineering to improve developer experience across Atlassian."
+    }, {
+      "start": "August 2022",
+      "end": "August 2025",
+      "place": "Remote",
+      "role": "Principal Software Engineer",
+      "desc": "P60 in the Confluence Enterprise Platform Group. I led initiatives to increase performance and scalability of Confluence Cloud, mentored and supported three teams of 30+ engineers, and launched multiple internal tools to reduce performance degradations and improve developer productivity."
+    }],
+    "desc": "I created and staffed a team of 15+ full-stack engineers responsible for Confluence CI/CD pipelines."
   },
   {
     "start": "December 2018",
@@ -14,7 +29,7 @@
     "role": "Principle Software Engineer",
     "company": "Newsela",
     "desc": "Lead architect of Alexandria, Newsela's content management system. I built and mentored a team of engineers, designers, and product managers and led cross-departmental initiatives with direct business impact.",
-    "showMore": "My last role",
+    "showMore": "My final role",
     "showEvenMore": "My previous role",
     "subjobs": [{
       "start": "August 2021",
@@ -42,7 +57,7 @@
     "end": "June 2014",
     "place": "Brooklyn, NY",
     "role": "Freelance Web Designer",
-    "company": "Keats Heavy Industries",
+    "company": "Self Employed",
     "desc": "I built websites and web apps for freelance clients in San Francisco, New York, and Tokyo.",
     "showMore": "I worked with",
     "showEvenMore": "I also worked with",
@@ -51,40 +66,35 @@
         "start": "July 2013",
         "end": "June 2014",
         "place": "New York, NY",
-        "role": "Front-End Web Developer",
-        "company": "Bolster",
+        "role": "Bolster",
         "desc": "I joined Bolster (a remodeling startup) as the first front-end developer, and built web applications using AngularJS, Stylus, and a gulp-based workflow."
       },
       {
         "start": "Dec. 2012",
         "end": "July 2013",
         "place": "New York, NY",
-        "role": "Front-End Web Developer",
-        "company": "Busker.fm",
+        "role": "Busker.fm",
         "desc": "At Busker (a music startup) I built SpineJS-based web apps for consumers, artists, and record labels. I also learned Ruby and Sinatra working with our back-end developer and introduced non-blocking UI design and agile development."
       },
       {
         "start": "July 2012",
         "end": "Dec. 2012",
         "place": "New York, NY",
-        "role": "Front-End Web Developer",
-        "company": "Barrel",
+        "role": "Barrel",
         "desc": "At Barrel, I built responsive websites on Wordpress, Shopify, and other CMS's. I also assisted in the development and maintenance of Phonegap-wrapped mobile web apps."
       },
       {
         "start": "March 2011",
         "end": "June 2012",
         "place": "New York, NY",
-        "role": "User Experience Engineer",
-        "company": "Credit Suisse",
+        "role": "Credit Suisse",
         "desc": "I was part of a three-person development team that built internal and external web apps using ExtJS. We also led mobile web development efforts company-wide, and created and maintained a robust API for client widgets."
       },
       {
         "start": "Oct. 2010",
         "end": "Jan. 2011",
         "place": "New York, NY",
-        "role": "SCRUM Master / Drupal Developer",
-        "company": "Ology Media",
+        "role": "Ology Media",
         "desc": "I developed custom modules for a Drupal-based social networking site, and set up an AGILE development workflow."
       }
     ]
@@ -103,32 +113,28 @@
         "start": "Jan. 2010",
         "end": "May 2010",
         "place": "Rochester, NY",
-        "role": "Level III Systems Engineer",
-        "company": "Kriterium, LLC",
+        "role": "Kriterium, LLC (Level III Systems Engineer)",
         "desc": "At Kriterum, I provided IT managed solutions to medium and large businesses. This included traveling to server rollouts along the Eastern Seaboard, compiling technical documentation, and a lot of network cable crimping."
       },
       {
         "start": "Dec. 2009",
         "end": "May 2010",
         "place": "Rochester, NY",
-        "role": "Systems Administrator",
-        "company": "RIT Center for Computational Relativity and Gravitation",
+        "role": "RIT Center for Computational Relativity and Gravitation (Systems Administrator)",
         "desc": "The RIT CCRG is a small research group that uses supercomputers to model the collisions of galaxies and black holes. I maintained their webservers, fileservers, backup systems, and website."
       },
       {
         "start": "March 2009",
         "end": "Nov. 2009",
         "place": "Oakland, CA",
-        "role": "Technical Support Lead",
-        "company": "Maestro Conference",
+        "role": "Maestro Conference (Technical Support Lead)",
         "desc": "I joined Maestro Conference as one of their first hires, and set up their support workflow and technical documentation. I sat in on development meetings, and was introduced to both AGILE methodologies and automated testing."
       },
       {
         "start": "Oct. 2008",
         "end": "Jan. 2009",
         "place": "Rochester, NY",
-        "role": "Tier 1 Technical Support",
-        "company": "Eastman Kodak Company",
+        "role": "Eastman Kodak Company (Tier 1 Technical Support)",
         "desc": "I did a brief stint in call-center technical support, and lobbied for Linux driver support for Kodak's printers."
       }
     ]

@@ -6,11 +6,11 @@
     faMastodon,
     faInstagram,
     faTiktok,
-    faTumblr,
     faLinkedin,
     faBluesky,
+    faYoutube,
   } from '@fortawesome/free-brands-svg-icons';
-  import {faEnvelope, faEgg, faRss} from '@fortawesome/free-solid-svg-icons';
+  import {faEnvelope, faRss} from '@fortawesome/free-solid-svg-icons';
   import Wrapper from './Wrapper.svelte';
   import Heading from './Heading.svelte';
 
@@ -51,18 +51,6 @@
           title: 'blog.nelson.codes',
           url: 'https://blog.nelson.codes',
         },
-        {
-          icon: faTumblr,
-          alt: 'tumblr',
-          title: 'nelsonpecora',
-          url: 'https://nelsonpecora.tumblr.com/',
-        },
-        {
-          icon: faEgg,
-          alt: 'cohost',
-          title: 'nelsonpecora',
-          url: 'https://cohost.org/nelsonpecora',
-        },
       ],
     },
     {
@@ -79,6 +67,12 @@
           alt: 'tiktok',
           title: 'nelsonpecora',
           url: 'https://www.tiktok.com/@nelsonpecora',
+        },
+        {
+          icon: faYoutube,
+          alt: 'youtube',
+          title: '@nelsonpecora',
+          url: 'https://www.youtube.com/@nelsonpecora',
         },
       ],
     },

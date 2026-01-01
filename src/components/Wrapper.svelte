@@ -1,6 +1,7 @@
 <script>
   export let theme = 'light';
   export let splash = false;
+  export let resume = false;
 </script>
 
 <style>
@@ -8,7 +9,7 @@
 		align-items: center;
 		display: flex;
 		flex-flow: row wrap;
-		height: 100vh;
+		height: calc(100vh - 90px);
 		justify-content: center;
 		position: relative;
 	}
@@ -31,10 +32,16 @@
     padding: 20px;
     width: 100%;
   }
+
+  @media screen and (min-width: 1024px) {
+    .splash.resume {
+      justify-content: space-between;
+    }
+  }
 </style>
 
 <div class={theme}>
-  <section class="inner" class:splash>
+  <section class="inner" class:splash class:resume>
     <slot />
   </section>
 </div>
